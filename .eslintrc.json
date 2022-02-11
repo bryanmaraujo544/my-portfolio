@@ -22,6 +22,16 @@
     "import/prefer-default-export": "off",
     "react/jsx-no-bind": "off",
     "no-unneeded-ternary": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "import/extensions": "off"
+  },
+
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+    }
   }
 }
