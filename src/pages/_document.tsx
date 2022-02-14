@@ -43,6 +43,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <div id="menu-root" />
         </body>
       </Html>
     );

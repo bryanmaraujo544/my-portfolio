@@ -1,0 +1,108 @@
+import styled from 'styled-components';
+
+export const Container = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  width: 100%;
+  overflow: hidden;
+
+  .logo {
+    height: 4.8rem;
+    position: relative;
+    width: 4.8rem;
+
+    @media (max-width: 468px) {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+  }
+  .menu-btns-container {
+    z-index: 10;
+    display: none;
+    color: #fff;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: inline-block;
+    }
+
+    .icon {
+      font-size: 3.2rem;
+    }
+  }
+`;
+
+export const MainContainer = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  .list-item {
+    position: relative;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 0.4rem 0.6rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: #00a8e8;
+      transition: all 0.25s ease-in;
+      border-radius: 0.2rem;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+`;
+
+export const RightButtons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-left: 6.4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .resume-btn {
+    background: transparent;
+    border: 1.5px solid #00a8e8;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: all 0.1s ease-in;
+    &:hover {
+      background: #00a8e8;
+    }
+  }
+
+  .settings-icon {
+    font-size: 2.4rem;
+    color: #fff;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #adb5bd;
+      cursor: pointer;
+    }
+  }
+`;
