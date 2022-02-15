@@ -37,11 +37,11 @@ const global = createGlobalStyle`
       font-size: 8px;
     }
 
-    @media (max-width: 468px) {
+    @media (max-width: 300px) {
       font-size: 7px;
     }
 
-    @media (max-width: 268px) {
+    @media (max-width: 238px) {
       font-size: 6px;
     }
   }
