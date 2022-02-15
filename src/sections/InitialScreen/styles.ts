@@ -27,10 +27,6 @@ export const MainInfos = styled.div`
   text-align: center;
   margin-top: 4.8rem;
 
-  @media (max-width: 468px) {
-    margin-top: 3.2rem;
-  }
-
   .uptitle {
     color: #00a8e8;
   }
