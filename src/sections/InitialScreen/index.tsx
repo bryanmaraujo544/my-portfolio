@@ -1,5 +1,9 @@
+import Image from 'next/image';
+
 import { Header } from 'components/Header';
-import { Container } from './styles';
+import arrow from 'assets/arrow.svg';
+import { Container, MainInfos } from './styles';
+import texts from './text-content';
 
 export const InitialScreen = () => {
   console.log('');
@@ -7,6 +11,15 @@ export const InitialScreen = () => {
   return (
     <Container>
       <Header />
+      <MainInfos>
+        <p className="uptitle">{texts.pt.mainInfos.uptitle}</p>
+        <h2 className="name">{texts.pt.mainInfos.name}</h2>
+        <h3 className="subtitle">{texts.pt.mainInfos.subtitle}</h3>
+        <p className="description">{texts.pt.mainInfos.description}</p>
+      </MainInfos>
+      <div className="arrow-icon">
+        <Image src={arrow} layout="fill" />
+      </div>
     </Container>
   );
 };

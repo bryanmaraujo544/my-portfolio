@@ -9,6 +9,7 @@ const global = createGlobalStyle`
     box-sizing: border-box;
     font-size: 1.6rem;
     list-style: none;
+    line-height: 1.5;
   }
 
   button {
@@ -38,6 +39,10 @@ const global = createGlobalStyle`
 
     @media (max-width: 468px) {
       font-size: 7px;
+    }
+
+    @media (max-width: 268px) {
+      font-size: 6px;
     }
   }
 
