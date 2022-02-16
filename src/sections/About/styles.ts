@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  height: 300px;
-  margin-bottom: 64px;
 
   .title {
     text-align: center;
@@ -14,6 +12,11 @@ export const Container = styled.section`
     grid-template-columns: 1fr 1fr;
     width: 100%;
     margin-top: 6.4rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      margin-top: 4.8rem;
+    }
   }
 `;
 
@@ -36,10 +39,23 @@ export const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    margin-top: 4.8rem;
+  }
+
   .image {
     position: relative;
     width: 25.6rem;
     height: 25.6rem;
+
+    @media (max-width: 768px) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    img {
+      object-fit: contain;
+    }
 
     &::before {
       content: '';
@@ -49,6 +65,10 @@ export const ImageContainer = styled.div`
       width: 85%;
       height: 85%;
       border: 2px solid #00a8e8;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 `;

@@ -19,7 +19,7 @@ const textContent: Props = {
       name: 'Bryan Martins',
       subtitle: 'Desenvolvedor Front-End',
       description:
-        'Tenho larga experiência em construir aplicações web interativas e modernas. Atualmente estou à procura de uma oportuinidade de emprego para colocar minhas habilidades em prática.',
+        'Larga experiência em construir aplicações web interativas e modernas. Atualmente estou à procura de uma oportuinidade de emprego para colocar minhas habilidades em prática.',
     },
   },
   en: {
@@ -28,7 +28,7 @@ const textContent: Props = {
       name: 'Bryan Martins',
       subtitle: 'Front-End Developer',
       description:
-        'I have large experience on building interactive and modern web applications. Nowadays I am looking for a job opportunity to put my skills in practice',
+        'Large experience on building interactive and modern web applications. Nowadays I am looking for a job opportunity to put my skills in practice',
     },
   },
 };

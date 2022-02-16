@@ -9,7 +9,8 @@ export const Layout = styled.div`
   max-width: 1720px;
   padding: 0 6.4rem;
   position: relative;
-  overflow-x: hidden;
+
+  margin-bottom: 32px;
 
   @media (max-width: 768px) {
     padding: 0 3.2rem;
