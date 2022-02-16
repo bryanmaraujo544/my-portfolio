@@ -14,7 +14,16 @@ export const Container = styled.section`
     height: 3.6rem;
     position: relative;
     margin: 0 auto;
-    margin-top: 4.8rem;
+    margin-top: 4.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: translateY(0.8rem) scale(1.01);
+    }
+
+    &:active {
+      transform: translateY(0.8rem) scale(0.9);
+    }
   }
 `;
 

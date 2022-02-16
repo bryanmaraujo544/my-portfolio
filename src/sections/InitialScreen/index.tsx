@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 import { Header } from 'components/Header';
 import arrow from 'assets/arrow.svg';
@@ -18,7 +19,9 @@ export const InitialScreen = () => {
         <p className="description">{texts.pt.mainInfos.description}</p>
       </MainInfos>
       <div className="arrow-icon">
-        <Image src={arrow} layout="fill" />
+        <Link to="about">
+          <Image src={arrow} layout="fill" />
+        </Link>
       </div>
     </Container>
   );

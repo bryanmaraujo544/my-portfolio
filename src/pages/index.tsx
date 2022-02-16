@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import { Layout } from 'components/Layout';
 import { InitialScreen } from 'sections/InitialScreen';
+import { About } from 'sections/About';
 
 const Home: NextPage = () => (
   <>
@@ -13,6 +14,7 @@ const Home: NextPage = () => (
     </Head>
     <Layout>
       <InitialScreen />
+      <About />
     </Layout>
   </>
 );
