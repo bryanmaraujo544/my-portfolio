@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Layout } from 'components/Layout';
 import { InitialScreen } from 'sections/InitialScreen';
 import { About } from 'sections/About';
+import { Projects } from 'sections/Projects';
 
 const Home: NextPage = () => (
   <>
@@ -15,6 +16,7 @@ const Home: NextPage = () => (
     <Layout>
       <InitialScreen />
       <About />
+      <Projects />
     </Layout>
   </>
 );
