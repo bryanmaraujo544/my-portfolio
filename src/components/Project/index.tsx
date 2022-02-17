@@ -33,7 +33,11 @@ export const Project = ({ isLeft, projectInfos }: Props) => {
   return (
     <Container isLeft={isLeft}>
       <div className="image-container">
-        <Image src={projectInfos.imageSrc} layout="fill" />
+        <Image
+          src={projectInfos.imageSrc}
+          layout="fill"
+          alt="project-preview"
+        />
       </div>
       <div className="infos-container">
         <Uptitle>{projectInfos.uptitle}</Uptitle>

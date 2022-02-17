@@ -19,7 +19,7 @@ export const About = () => {
         </TextContainer>
         <ImageContainer>
           <div className="image">
-            <Image src={smileImg} layout="fill" />
+            <Image src={smileImg} layout="fill" alt="my-cartoon" />
           </div>
         </ImageContainer>
       </div>

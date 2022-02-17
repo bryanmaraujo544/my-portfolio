@@ -43,23 +43,31 @@ export const MainContainer = styled.ul`
     display: none;
   }
 
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
   .list-item {
     position: relative;
     font-size: 1.6rem;
     color: #fff;
+    padding: 0 0.4rem;
     cursor: pointer;
-    padding: 0 0.4rem 0.6rem;
+    line-height: 1;
+    font-weight: 700;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -0.8rem;
       right: 0;
       width: 0;
       height: 2px;
       background: #00a8e8;
       transition: all 0.25s ease-in;
-      border-radius: 0.2rem;
+      border-radius: 0.05rem;
     }
 
     &:hover {
@@ -89,7 +97,7 @@ export const RightButtons = styled.div`
     padding: 0.6rem 1.2rem;
     color: #fff;
     font-size: 1.4rem;
-    transition: all 0.1s ease-in;
+    transition: all 0.25s ease-in;
     &:hover {
       background: #00a8e8;
     }

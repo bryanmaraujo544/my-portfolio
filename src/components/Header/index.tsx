@@ -19,12 +19,14 @@ export const Header = () => {
   return (
     <Container>
       <div className="logo">
-        <Image src={logo} layout="fill" />
+        <Image src={logo} layout="fill" alt="logo" />
       </div>
       <MainContainer as={motion.div}>
-        {texts.pt.listSections.map(({ title }) => (
-          <li className="list-item">{title}</li>
-        ))}
+        <ul>
+          {texts.pt.listSections.map(({ title }) => (
+            <li className="list-item">{title}</li>
+          ))}
+        </ul>
         <RightButtons>
           <button type="button" className="resume-btn">
             {texts.pt.resumeButton}
@@ -35,6 +37,7 @@ export const Header = () => {
         </RightButtons>
       </MainContainer>
 
+      {/* MOBILE COMPONENTS */}
       <div className="menu-btns-container" onClick={() => handleToggleMenu()}>
         {isMenuOpen ? (
           <AiOutlineClose className="icon" />
