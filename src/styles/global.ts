@@ -53,6 +53,8 @@ const global = createGlobalStyle`
     max-width: 100vw;
     height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: url(${bg.src});
   }
 `;
