@@ -1,41 +1,61 @@
+/* eslint-disable no-confusing-arrow */
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface Props {
+  isLeft: boolean;
+}
+
+export const Container = styled.div<Props>`
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: ${({ isLeft }) =>
+    isLeft ? '1fr 1.25fr' : '1.25fr 1fr'};
+  grid-template-rows: 1fr;
   align-items: center;
   width: 100%;
   margin-top: 6.4rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
   .image-container {
     position: relative;
     width: 100%;
     height: 40rem;
+    grid-column: ${({ isLeft }) => (isLeft ? '2 / 3' : '1 / 2')};
+    grid-row: 1 / 2;
+    background: #003459;
 
     @media (max-width: 768px) {
       height: 30rem;
       width: 100%;
+      grid-row: auto;
+      grid-column: 1 / 2;
     }
 
     img {
       object-fit: cover;
-    }
+      opacity: 0.5;
+      transition: opacity 0.25s ease-in;
+      cursor: pointer;
 
-    width: calc(100% + 4.8rem);
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .infos-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: ${({ isLeft }) => (isLeft ? 'flex-start' : 'flex-end')};
+    grid-column: ${({ isLeft }) => (isLeft ? '1 / 2' : '2 / 3')};
 
     @media (max-width: 768px) {
       align-items: center;
       margin-top: 3.2rem;
+      grid-column: 1 / 2;
     }
   }
 `;
@@ -87,12 +107,13 @@ export const Buttons = styled.div`
   margin-top: 1.6rem;
   gap: 1.6rem;
 
-  .btn {
-    background: none;
-
-    .icon {
-      font-size: 2.6rem;
-      color: #adb5bd;
+  .icon {
+    font-size: 2.6rem;
+    color: #adb5bd;
+    cursor: pointer;
+    transition: color 0.25s;
+    &:hover {
+      color: #fff;
     }
   }
 `;

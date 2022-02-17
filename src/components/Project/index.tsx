@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { FiGithub } from 'react-icons/fi';
 import { IoOpenOutline } from 'react-icons/io5';
@@ -30,7 +31,7 @@ export const Project = ({ isLeft, projectInfos }: Props) => {
   console.log({ isLeft, projectInfos });
 
   return (
-    <Container>
+    <Container isLeft={isLeft}>
       <div className="image-container">
         <Image src={projectInfos.imageSrc} layout="fill" />
       </div>
@@ -46,12 +47,14 @@ export const Project = ({ isLeft, projectInfos }: Props) => {
           ))}
         </Tags>
         <Buttons>
-          <button type="submit" className="btn">
+          <Link href={projectInfos.githubURL}>
             <FiGithub className="icon" />
-          </button>
-          <button type="submit" className="btn">
-            <IoOpenOutline className="icon" />
-          </button>
+          </Link>
+          {projectInfos.projectURL && (
+            <Link href={projectInfos.projectURL}>
+              <IoOpenOutline className="icon" />
+            </Link>
+          )}
         </Buttons>
       </div>
     </Container>
