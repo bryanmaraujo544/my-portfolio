@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Project } from 'components/Project';
 import { SectionTitle } from 'components/SectionTitle';
 import { Container } from './styles';
@@ -14,6 +16,11 @@ export const Projects = () => {
           <Project projectInfos={project} isLeft={i % 2 === 1} />
         ))}
       </div>
+      <button type="button" className="see-more">
+        <Link href="https://github.com/bryanmaraujo544?tab=repositories">
+          {texts.pt.seeMoreButton}
+        </Link>
+      </button>
     </Container>
   );
 };

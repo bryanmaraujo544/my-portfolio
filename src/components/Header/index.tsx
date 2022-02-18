@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-import logo from 'assets/logo.svg';
+import logo from 'assets/logo.png';
 import { AiOutlineSetting, AiOutlineClose } from 'react-icons/ai';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <Container>
       <div className="logo">
-        <Image src={logo} layout="fill" alt="logo" />
+        <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
       </div>
       <MainContainer as={motion.div}>
         <ul>

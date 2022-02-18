@@ -12,7 +12,6 @@ export const Container = styled.div<Props>`
   grid-template-rows: 1fr;
   align-items: center;
   width: 100%;
-  margin-top: 6.4rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -76,13 +75,14 @@ export const DescContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.6rem;
+  padding: 2.4rem;
   min-height: 8rem;
   margin: 1.6rem 0;
   background: #003459;
   width: calc(100% + 4.8rem);
   z-index: 10;
   border-radius: 0.2rem;
+  box-shadow: 0 0.4rem 0.4rem #00000010;
 
   @media (max-width: 768px) {
     width: 100%;

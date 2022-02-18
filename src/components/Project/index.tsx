@@ -51,11 +51,11 @@ export const Project = ({ isLeft, projectInfos }: Props) => {
           ))}
         </Tags>
         <Buttons>
-          <Link href={projectInfos.githubURL}>
+          <Link href={projectInfos.githubURL} passHref>
             <FiGithub className="icon" />
           </Link>
           {projectInfos.projectURL && (
-            <Link href={projectInfos.projectURL}>
+            <Link href={projectInfos.projectURL} passHref>
               <IoOpenOutline className="icon" />
             </Link>
           )}

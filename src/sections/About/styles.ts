@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-
+  margin-top: -7.2rem;
   .title {
     text-align: center;
   }
@@ -11,11 +11,9 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    margin-top: 6.4rem;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      margin-top: 4.8rem;
     }
   }
 `;
