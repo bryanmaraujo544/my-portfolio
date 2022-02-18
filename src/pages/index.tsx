@@ -6,6 +6,7 @@ import { InitialScreen } from 'sections/InitialScreen';
 import { About } from 'sections/About';
 import { Projects } from 'sections/Projects';
 import { Contact } from 'sections/Contact';
+import { Footer } from 'sections/Footer';
 
 const Home: NextPage = () => (
   <>
@@ -19,6 +20,7 @@ const Home: NextPage = () => (
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </Layout>
   </>
 );
