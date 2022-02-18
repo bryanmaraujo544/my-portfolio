@@ -33,6 +33,10 @@ export const Container = styled.div<Props>`
       grid-column: 1 / 2;
     }
 
+    @media (max-width: 468px) {
+      height: 20rem;
+    }
+
     img {
       object-fit: cover;
       opacity: 0.5;
@@ -95,10 +99,17 @@ export const DescContainer = styled.div`
 
 export const Tags = styled.div`
   display: flex;
+  justify-content: center;
   gap: 1.6rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    margin: 0.8rem;
+  }
 
   .tag {
     color: #adb5bd;
+    line-height: 1;
   }
 `;
 

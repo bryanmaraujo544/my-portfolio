@@ -5,6 +5,7 @@ import { Layout } from 'components/Layout';
 import { InitialScreen } from 'sections/InitialScreen';
 import { About } from 'sections/About';
 import { Projects } from 'sections/Projects';
+import { Contact } from 'sections/Contact';
 
 const Home: NextPage = () => (
   <>
@@ -17,6 +18,7 @@ const Home: NextPage = () => (
       <InitialScreen />
       <About />
       <Projects />
+      <Contact />
     </Layout>
   </>
 );
