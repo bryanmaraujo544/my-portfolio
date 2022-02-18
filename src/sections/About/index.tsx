@@ -9,7 +9,7 @@ export const About = () => {
   console.log('');
 
   return (
-    <Container>
+    <Container id="about">
       <SectionTitle className="title">Sobre Mim</SectionTitle>
       <div className="main-container">
         <TextContainer>

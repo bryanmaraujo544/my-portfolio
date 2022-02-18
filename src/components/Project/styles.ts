@@ -25,6 +25,8 @@ export const Container = styled.div<Props>`
     grid-column: ${({ isLeft }) => (isLeft ? '2 / 3' : '1 / 2')};
     grid-row: 1 / 2;
     background: #003459;
+    border-radius: 0.2rem;
+    overflow: hidden;
 
     @media (max-width: 768px) {
       height: 30rem;
