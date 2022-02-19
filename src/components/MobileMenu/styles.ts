@@ -40,7 +40,7 @@ export const Container = styled.aside`
     margin-top: 6.4rem;
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 2rem;
 
     .list-item {
       color: #fff;
@@ -55,6 +55,73 @@ export const Container = styled.aside`
       }
       @media (max-width: 468px) {
         font-size: 2rem;
+      }
+    }
+  }
+`;
+
+export const ConfigContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.8rem;
+  margin-top: 3.2rem;
+  z-index: 999;
+
+  button {
+    background: none;
+  }
+
+  .settings-icon-container {
+    display: flex;
+
+    .settings-icon {
+      font-size: 2.4rem;
+      color: #fff;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: #adb5bd;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .settings {
+    position: absolute;
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1.6rem;
+    width: auto;
+    height: 4.8rem;
+
+    padding: 0.4rem 1.2rem;
+    background: #00171f;
+    border-radius: 0.2rem;
+    z-index: 40;
+    margin-left: 1.6rem;
+
+    .sound-icon {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-top: 0.6rem;
+    }
+
+    .lang-img {
+      position: relative;
+      height: 1.6rem;
+      width: 2.4rem;
+      background: #00171f;
+      display: flex;
+      align-items: center;
+
+      img {
+        opacity: 0.75;
+        object-fit: cover;
       }
     }
   }

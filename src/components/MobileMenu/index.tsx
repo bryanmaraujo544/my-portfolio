@@ -1,9 +1,16 @@
-import { useEffect } from 'react';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineSetting } from 'react-icons/ai';
+import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
+import useSound from 'use-sound';
 
-import { Container, Overlay } from './styles';
+import { Container, Overlay, ConfigContainer } from './styles';
 import texts from './text-content';
+import PopSound from '../../../public/pop_drip.mp3';
+// import ClickSound from '../../../public/click_04.mp3';
+import PtImg from '../../assets/portuguese.png';
+import EnImg from '../../assets/english.jpg';
 
 const OverlayVariants = {
   hidden: {
@@ -34,14 +41,25 @@ interface Props {
 
 export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const animateControl = useAnimation();
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isSoundOn, setIsSoundOn] = useState(true);
+  const [language, setLanguage] = useState('pt');
+
+  const [playPop] = useSound(PopSound);
 
   useEffect(() => {
     if (isMenuOpen) {
       animateControl.start('show');
     } else {
       animateControl.start('hidden');
+      setIsSettingsOpen(false);
     }
   }, [isMenuOpen]);
+
+  function handleToggleSettings() {
+    playPop();
+    setIsSettingsOpen((prevState) => !prevState);
+  }
 
   return (
     <Overlay
@@ -61,6 +79,40 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             </li>
           ))}
         </ul>
+        <ConfigContainer>
+          <button
+            type="button"
+            className="settings-icon-container"
+            onClick={handleToggleSettings}
+          >
+            <AiOutlineSetting className="settings-icon" />
+          </button>
+          <motion.div
+            className="settings"
+            animate={{
+              x: isSettingsOpen ? 0 : -24,
+              opacity: isSettingsOpen ? 1 : 0,
+              display: isSettingsOpen ? 'flex' : 'none',
+            }}
+          >
+            <button type="button">
+              {isSoundOn ? (
+                <GiSoundOn className="sound-icon" />
+              ) : (
+                <GiSoundOff className="sound-icon" />
+              )}
+            </button>
+            <button type="button" className="language-container">
+              <div className="lang-img">
+                {language === 'pt' ? (
+                  <Image src={PtImg} layout="fill" />
+                ) : (
+                  <Image src={EnImg} layout="fill" />
+                )}
+              </div>
+            </button>
+          </motion.div>
+        </ConfigContainer>
       </Container>
     </Overlay>
   );

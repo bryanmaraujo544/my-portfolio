@@ -7,24 +7,10 @@ export const Container = styled.section`
   width: 100%;
   overflow: hidden;
   min-height: 100vh;
-  height: 100%;
+  height: 100vh;
 
-  .arrow-icon {
-    width: 3.6rem;
-    height: 3.6rem;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 4.2rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      transform: scale(1.01);
-    }
-
-    &:active {
-      transform: scale(0.9);
-    }
+  @media (max-width: 768px) {
+    height: 100%;
   }
 `;
 
@@ -35,7 +21,13 @@ export const MainInfos = styled.div`
   align-items: center;
   width: 100%;
   text-align: center;
-  margin-top: 4.8rem;
+  margin-top: -4.8rem;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    margin-top: 2.4rem;
+    height: auto;
+  }
 
   .uptitle {
     color: #00a8e8;
@@ -68,5 +60,23 @@ export const MainInfos = styled.div`
     text-align: center;
     color: #adb5bd;
     margin-top: 2rem;
+  }
+
+  .arrow-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 4.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 `;

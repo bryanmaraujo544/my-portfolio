@@ -17,12 +17,12 @@ export const InitialScreen = () => {
         <h2 className="name">{texts.pt.mainInfos.name}</h2>
         <h3 className="subtitle">{texts.pt.mainInfos.subtitle}</h3>
         <p className="description">{texts.pt.mainInfos.description}</p>
+        <div className="arrow-icon">
+          <Link to="about" smooth="true" offset={-24}>
+            <Image src={arrow} layout="fill" />
+          </Link>
+        </div>
       </MainInfos>
-      <div className="arrow-icon">
-        <Link to="about" smooth="true" offset={-24}>
-          <Image src={arrow} layout="fill" />
-        </Link>
-      </div>
     </Container>
   );
 };

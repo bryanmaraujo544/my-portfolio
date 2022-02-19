@@ -6,7 +6,7 @@ export const Container = styled.header`
   align-items: center;
   height: 9.6rem;
   width: 100%;
-  overflow: hidden;
+  /* overflow-x: hidden; */
 
   .logo {
     height: 4.8rem;
@@ -103,15 +103,67 @@ export const RightButtons = styled.div`
       background: #00a8e8;
     }
   }
+`;
 
-  .settings-icon {
-    font-size: 2.4rem;
-    color: #fff;
-    transition: color 0.2s ease-in;
+export const ConfigContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 3.8rem;
 
-    &:hover {
-      color: #adb5bd;
-      cursor: pointer;
+  button {
+    background: none;
+  }
+
+  .settings-icon-container {
+    display: flex;
+
+    .settings-icon {
+      font-size: 2.4rem;
+      color: #fff;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: #adb5bd;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .settings {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    margin-top: 1.6rem;
+    padding: 1.2rem 0.4rem;
+    background: #003459;
+    border-radius: 0.2rem;
+    z-index: 40;
+
+    .sound-icon {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-top: -0.2rem;
+    }
+
+    .lang-img {
+      position: relative;
+      height: 1.6rem;
+      width: 2.4rem;
+      background: #003459;
+      display: flex;
+      align-items: center;
+
+      img {
+        opacity: 0.75;
+        object-fit: cover;
+      }
     }
   }
 `;
