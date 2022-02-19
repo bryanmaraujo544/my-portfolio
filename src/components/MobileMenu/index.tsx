@@ -56,7 +56,9 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
         />
         <ul>
           {texts.pt.listSections.map(({ title }) => (
-            <li className="list-item">{title}</li>
+            <li key={title} className="list-item">
+              {title}
+            </li>
           ))}
         </ul>
       </Container>

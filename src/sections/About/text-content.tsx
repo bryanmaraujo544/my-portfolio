@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // interface DataProps {
 //   mainInfos: {
 //     uptitle: string;
@@ -16,7 +17,7 @@ const textContent = {
   pt: {
     title: 'Sobre Mim',
     mainText: [
-      'Olá! Meu nome é Bryan e sou apaixonado por desenvolver soluções em forma de aplicações para a web. Busco evoluir a cada dia por meio de estudos teóricos alinhados a muita prática!',
+      'Olá! Meu nome é Bryan e sou apaixonado por desenvolver aplicações para a web. Busco evoluir a cada dia por meio de estudos teóricos alinhados a muita prática!',
       <>
         Minha trajetória na programação começou no ínicio de 2020, quando entrei
         no curso técnico de Desenvolvimento de Sistemas. Após 1 ano estudando{' '}
@@ -28,19 +29,28 @@ const textContent = {
         Atualmente meus estudos e projetos são para web, onde desenvolvo o
         <b>Front-end</b> e o <b>Back-end</b> da aplicação. Não me considero
         ainda um <b>Desenvolvedor Full-stack</b>, pois creio que consigo assumir
-        responsabilidades com mais preparo no front-end do que no back-end,
-        porém estou em busca de me aperfeiçoar nas duas esferas.
+        responsabilidades com mais preparo no front-end, porém estou em busca de
+        me aperfeiçoar nas duas esferas.
       </>,
     ],
   },
   en: {
-    mainInfos: {
-      uptitle: 'Hi, my name is',
-      name: 'Bryan Martins',
-      subtitle: 'Front-End Developer',
-      description:
-        'I have large experience on building interactive and modern web applications. Nowadays I am looking for a job opportunity to put my skills in practice',
-    },
+    title: 'About me',
+    mainText: [
+      'Hey! I am Bryan and I am passionate for build web aplicattions. I look for improve my habilities every day mixing the thery with a lot of practice',
+      <>
+        My journey has started at the beginning of 2020 when I've enrolled at
+        Systems Development technical course Sistemas. After 1 year studying{' '}
+        <b>HTML</b>, <b>CSS</b> and <b>Vanilla JavaScript</b>, I've started to
+        study the library <b>React</b>, and after some time <b>Node.js</b>.
+      </>,
+      <>
+        Nowadays my studies and projects are for the web, where I build the
+        <b>Front-end</b> and the <b>Back-end</b> of the application. I do not
+        consider myself a <b>Full-Stack developer</b> yet, because I think I'm
+        able to take responsibilities in Front-end with more confidence.
+      </>,
+    ],
   },
 };
 

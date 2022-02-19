@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import Image from 'next/image';
 
 import { SectionTitle } from 'components/SectionTitle';
@@ -13,8 +14,8 @@ export const About = () => {
       <SectionTitle className="title">Sobre Mim</SectionTitle>
       <div className="main-container">
         <TextContainer>
-          {texts.pt.mainText.map((text: any) => (
-            <p>{text}</p>
+          {texts.pt.mainText.map((text, i) => (
+            <p key={i}>{text}</p>
           ))}
         </TextContainer>
         <ImageContainer>

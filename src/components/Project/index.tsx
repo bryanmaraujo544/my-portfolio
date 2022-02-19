@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -40,16 +41,22 @@ export const Project = ({ isLeft, projectInfos }: Props) => (
       </DescContainer>
       <Tags>
         {projectInfos.tags.map((tag) => (
-          <p className="tag">{tag}</p>
+          <p key={tag} className="tag">
+            {tag}
+          </p>
         ))}
       </Tags>
       <Buttons>
-        <Link href={projectInfos.githubURL} passHref>
-          <FiGithub className="icon" />
+        <Link href={projectInfos.githubURL}>
+          <a>
+            <FiGithub className="icon" />
+          </a>
         </Link>
         {projectInfos.projectURL && (
-          <Link href={projectInfos.projectURL} passHref>
-            <IoOpenOutline className="icon" />
+          <Link href={projectInfos.projectURL}>
+            <a>
+              <IoOpenOutline className="icon" />
+            </a>
           </Link>
         )}
       </Buttons>

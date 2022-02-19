@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import Link from 'next/link';
 
 import { Project } from 'components/Project';
@@ -9,11 +10,11 @@ export const Projects = () => {
   console.log('');
 
   return (
-    <Container>
+    <Container id="projects">
       <SectionTitle>{texts.pt.title}</SectionTitle>
       <div className="projects-container">
         {texts.pt.projects.map((project, i) => (
-          <Project projectInfos={project} isLeft={i % 2 === 1} />
+          <Project key={i} projectInfos={project} isLeft={i % 2 === 1} />
         ))}
       </div>
       <button type="button" className="see-more">

@@ -19,7 +19,7 @@ export const InitialScreen = () => {
         <p className="description">{texts.pt.mainInfos.description}</p>
       </MainInfos>
       <div className="arrow-icon">
-        <Link to="about" smooth="true">
+        <Link to="about" smooth="true" offset={-24}>
           <Image src={arrow} layout="fill" />
         </Link>
       </div>

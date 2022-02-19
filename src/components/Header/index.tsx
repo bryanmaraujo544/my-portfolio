@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import { Link as LinkScroll } from 'react-scroll';
 
 import logo from 'assets/logo.png';
 import { AiOutlineSetting } from 'react-icons/ai';
@@ -23,8 +24,12 @@ export const Header = () => {
       </div>
       <MainContainer as={motion.div}>
         <ul>
-          {texts.pt.listSections.map(({ title }) => (
-            <li className="list-item">{title}</li>
+          {texts.pt.listSections.map(({ title, targetSection }) => (
+            <LinkScroll to={targetSection} smooth offset={-24}>
+              <li key={title} className="list-item">
+                {title}
+              </li>
+            </LinkScroll>
           ))}
         </ul>
         <RightButtons>

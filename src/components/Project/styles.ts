@@ -21,7 +21,7 @@ export const Container = styled.div<Props>`
   .image-container {
     position: relative;
     width: 100%;
-    height: 40rem;
+    height: 37.5rem;
     grid-column: ${({ isLeft }) => (isLeft ? '2 / 3' : '1 / 2')};
     grid-row: 1 / 2;
     background: #003459;
@@ -41,7 +41,7 @@ export const Container = styled.div<Props>`
 
     img {
       object-fit: cover;
-      opacity: 0.5;
+      opacity: 0.25;
       transition: opacity 0.25s ease-in;
       cursor: pointer;
 

@@ -17,12 +17,13 @@ export const Container = styled.section`
     margin-top: 4.2rem;
     cursor: pointer;
     transition: all 0.2s ease-in;
+
     &:hover {
-      transform: translateY(0.8rem) scale(1.01);
+      transform: scale(1.01);
     }
 
     &:active {
-      transform: translateY(0.8rem) scale(0.9);
+      transform: scale(0.9);
     }
   }
 `;
