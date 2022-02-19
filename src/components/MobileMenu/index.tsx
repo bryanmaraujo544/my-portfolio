@@ -1,5 +1,7 @@
-import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { AiOutlineClose } from 'react-icons/ai';
+
 import { Container, Overlay } from './styles';
 import texts from './text-content';
 
@@ -25,7 +27,12 @@ const MenuVariants = {
   show: { right: 0 },
 };
 
-export const MobileMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
+interface Props {
+  isMenuOpen: boolean;
+  setIsMenuOpen: any;
+}
+
+export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const animateControl = useAnimation();
 
   useEffect(() => {
@@ -43,6 +50,10 @@ export const MobileMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
       animate={animateControl}
     >
       <Container as={motion.aside} variants={MenuVariants}>
+        <AiOutlineClose
+          onClick={() => setIsMenuOpen(false)}
+          className="close-icon"
+        />
         <ul>
           {texts.pt.listSections.map(({ title }) => (
             <li className="list-item">{title}</li>

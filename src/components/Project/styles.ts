@@ -59,7 +59,7 @@ export const Container = styled.div<Props>`
 
     @media (max-width: 768px) {
       align-items: center;
-      margin-top: 3.2rem;
+      margin-top: 2.4rem;
       grid-column: 1 / 2;
     }
   }
@@ -92,6 +92,7 @@ export const DescContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+    text-align: center;
   }
 
   p {

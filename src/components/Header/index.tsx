@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import logo from 'assets/logo.png';
-import { AiOutlineSetting, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineSetting } from 'react-icons/ai';
 import { CgMenuRight } from 'react-icons/cg';
 import { motion } from 'framer-motion';
 import { MobileMenu } from 'components/MobileMenu';
@@ -39,13 +39,9 @@ export const Header = () => {
 
       {/* MOBILE COMPONENTS */}
       <div className="menu-btns-container" onClick={() => handleToggleMenu()}>
-        {isMenuOpen ? (
-          <AiOutlineClose className="icon" />
-        ) : (
-          <CgMenuRight className="icon" />
-        )}
+        {!isMenuOpen && <CgMenuRight className="icon" />}
       </div>
-      <MobileMenu isMenuOpen={isMenuOpen} />
+      <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </Container>
   );
 };

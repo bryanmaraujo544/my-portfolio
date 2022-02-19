@@ -14,7 +14,7 @@ export const Container = styled.section`
     gap: 9.6rem;
 
     @media (max-width: 768px) {
-      gap: 4.8rem;
+      gap: 6.4rem;
     }
   }
 

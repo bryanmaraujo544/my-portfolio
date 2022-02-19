@@ -23,6 +23,7 @@ export const Container = styled.header`
     display: none;
     color: #fff;
     cursor: pointer;
+    z-index: 20;
 
     @media (max-width: 768px) {
       display: inline-block;

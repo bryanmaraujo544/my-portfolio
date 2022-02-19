@@ -8,6 +8,7 @@ export const Overlay = styled.div`
   height: 100vh;
   background: #00000050;
   display: none;
+  z-index: 15;
 
   /* @media (max-width: 768px) {
     display: block;
@@ -27,6 +28,12 @@ export const Container = styled.aside`
 
   @media (max-width: 768px) {
     display: flex;
+  }
+
+  .close-icon {
+    font-size: 3.2rem;
+    align-self: flex-end;
+    color: #fff;
   }
 
   ul {
