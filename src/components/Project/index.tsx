@@ -27,40 +27,32 @@ interface Props {
   projectInfos: ProjectProps;
 }
 
-export const Project = ({ isLeft, projectInfos }: Props) => {
-  console.log({ isLeft, projectInfos });
-
-  return (
-    <Container isLeft={isLeft}>
-      <div className="image-container">
-        <Image
-          src={projectInfos.imageSrc}
-          layout="fill"
-          alt="project-preview"
-        />
-      </div>
-      <div className="infos-container">
-        <Uptitle>{projectInfos.uptitle}</Uptitle>
-        <Title>{projectInfos.title}</Title>
-        <DescContainer>
-          <p className="description">{projectInfos.description}</p>
-        </DescContainer>
-        <Tags>
-          {projectInfos.tags.map((tag) => (
-            <p className="tag">{tag}</p>
-          ))}
-        </Tags>
-        <Buttons>
-          <Link href={projectInfos.githubURL} passHref>
-            <FiGithub className="icon" />
+export const Project = ({ isLeft, projectInfos }: Props) => (
+  <Container isLeft={isLeft}>
+    <div className="image-container">
+      <Image src={projectInfos.imageSrc} layout="fill" alt="project-preview" />
+    </div>
+    <div className="infos-container">
+      <Uptitle>{projectInfos.uptitle}</Uptitle>
+      <Title>{projectInfos.title}</Title>
+      <DescContainer>
+        <p className="description">{projectInfos.description}</p>
+      </DescContainer>
+      <Tags>
+        {projectInfos.tags.map((tag) => (
+          <p className="tag">{tag}</p>
+        ))}
+      </Tags>
+      <Buttons>
+        <Link href={projectInfos.githubURL} passHref>
+          <FiGithub className="icon" />
+        </Link>
+        {projectInfos.projectURL && (
+          <Link href={projectInfos.projectURL} passHref>
+            <IoOpenOutline className="icon" />
           </Link>
-          {projectInfos.projectURL && (
-            <Link href={projectInfos.projectURL} passHref>
-              <IoOpenOutline className="icon" />
-            </Link>
-          )}
-        </Buttons>
-      </div>
-    </Container>
-  );
-};
+        )}
+      </Buttons>
+    </div>
+  </Container>
+);
