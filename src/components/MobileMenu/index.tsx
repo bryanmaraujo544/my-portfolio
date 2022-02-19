@@ -44,6 +44,7 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isSoundOn, setIsSoundOn] = useState(true);
   const [language, setLanguage] = useState('pt');
+  console.log({ setIsSoundOn, setLanguage });
 
   const [playPop] = useSound(PopSound);
 

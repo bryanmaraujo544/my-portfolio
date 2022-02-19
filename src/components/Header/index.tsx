@@ -29,6 +29,8 @@ export const Header = () => {
   const [isSoundOn, setIsSoundOn] = useState(true);
   const [language, setLanguage] = useState('pt');
 
+  console.log({ setIsSoundOn, setLanguage });
+
   const [playPop] = useSound(PopSound);
   const [playClick] = useSound(ClickSound);
 
