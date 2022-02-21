@@ -14,7 +14,7 @@ export const Container = styled.section`
     gap: 9.6rem;
 
     @media (max-width: 768px) {
-      gap: 6.4rem;
+      gap: 7.2rem;
     }
   }
 
@@ -25,6 +25,10 @@ export const Container = styled.section`
     border-radius: 0.2rem;
     padding: 0.8rem 1.6rem;
     transition: background 0.25s ease-in;
+
+    @media (max-width: 768px) {
+      margin-top: 7.2rem;
+    }
 
     a {
       color: #00a8e8;

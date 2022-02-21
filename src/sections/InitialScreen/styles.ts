@@ -8,10 +8,6 @@ export const Container = styled.section`
   overflow: hidden;
   min-height: 100vh;
   height: 100vh;
-
-  @media (max-width: 768px) {
-    height: 100%;
-  }
 `;
 
 export const MainInfos = styled.div`
@@ -25,8 +21,7 @@ export const MainInfos = styled.div`
   height: 100%;
 
   @media (max-width: 768px) {
-    margin-top: 2.4rem;
-    height: auto;
+    margin-top: -2.4rem;
   }
 
   .uptitle {

@@ -1,12 +1,14 @@
+import { useContext } from 'react';
+import { SettingsContext } from 'contexts/SettingsContext';
 import { Container } from './styles';
 import texts from './text-content';
 
 export const Footer = () => {
-  console.log('');
+  const { language } = useContext(SettingsContext);
 
   return (
     <Container>
-      <p>{texts.pt.text}</p>
+      <p>{texts[language].text}</p>
     </Container>
   );
 };

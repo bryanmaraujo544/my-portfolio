@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { AiOutlineClose, AiOutlineSetting } from 'react-icons/ai';
 import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 import useSound from 'use-sound';
 
+import { SettingsContext } from 'contexts/SettingsContext';
 import { Container, Overlay, ConfigContainer } from './styles';
 import texts from './text-content';
 import PopSound from '../../../public/pop_drip.mp3';
@@ -42,9 +43,10 @@ interface Props {
 export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const animateControl = useAnimation();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isSoundOn, setIsSoundOn] = useState(true);
-  const [language, setLanguage] = useState('pt');
-  console.log({ setIsSoundOn, setLanguage });
+
+  // prettier-ignore
+  // eslint-disable-next-line max-len
+  const { isSoundOn, language, handleToggleLanguage, handleToggleSound } = useContext(SettingsContext);
 
   const [playPop] = useSound(PopSound);
 
@@ -74,7 +76,7 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
           className="close-icon"
         />
         <ul>
-          {texts.pt.listSections.map(({ title }) => (
+          {texts[language].listSections.map(({ title }) => (
             <li key={title} className="list-item">
               {title}
             </li>
@@ -96,14 +98,18 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               display: isSettingsOpen ? 'flex' : 'none',
             }}
           >
-            <button type="button">
+            <button type="button" onClick={handleToggleSound}>
               {isSoundOn ? (
                 <GiSoundOn className="sound-icon" />
               ) : (
                 <GiSoundOff className="sound-icon" />
               )}
             </button>
-            <button type="button" className="language-container">
+            <button
+              type="button"
+              className="language-container"
+              onClick={handleToggleLanguage}
+            >
               <div className="lang-img">
                 {language === 'pt' ? (
                   <Image src={PtImg} layout="fill" />

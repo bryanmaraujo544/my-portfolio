@@ -4,9 +4,6 @@ export const Container = styled.section`
   width: 100%;
   margin-top: -6.4rem;
 
-  @media (max-width: 768px) {
-    margin-top: -1.6rem;
-  }
   .title {
     text-align: center;
   }

@@ -24,18 +24,22 @@ export const Container = styled.section`
     margin-top: 3.2rem;
     color: #adb5bd;
 
-    .icon {
-      font-size: 3.6rem;
-      cursor: pointer;
-      transition: all 0.25s ease-in;
+    .social-media {
+      color: #adb5bd;
 
-      &:hover {
-        color: #fff;
-        transform: scale(1.1);
-      }
+      .icon {
+        font-size: 3.6rem;
+        cursor: pointer;
+        transition: all 0.25s ease-in;
 
-      &:active {
-        transform: scale(0.9);
+        &:hover {
+          color: #fff;
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
       }
     }
   }

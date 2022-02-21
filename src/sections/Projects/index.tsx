@@ -3,23 +3,36 @@ import Link from 'next/link';
 
 import { Project } from 'components/Project';
 import { SectionTitle } from 'components/SectionTitle';
+import useSound from 'use-sound';
+import { useContext } from 'react';
+import { SettingsContext } from 'contexts/SettingsContext';
 import { Container } from './styles';
 import texts from './text-content';
 
+import PopSound from '../../../public/pop_drip.mp3';
+import ClickSound from '../../../public/click_04.mp3';
+
 export const Projects = () => {
-  console.log('');
+  const [playPop] = useSound(PopSound);
+  const [playClick] = useSound(ClickSound);
+  const { language } = useContext(SettingsContext);
 
   return (
     <Container id="projects">
-      <SectionTitle>{texts.pt.title}</SectionTitle>
+      <SectionTitle>{texts[language].title}</SectionTitle>
       <div className="projects-container">
-        {texts.pt.projects.map((project, i) => (
+        {texts[language].projects.map((project, i) => (
           <Project key={i} projectInfos={project} isLeft={i % 2 === 1} />
         ))}
       </div>
-      <button type="button" className="see-more">
+      <button
+        type="button"
+        className="see-more"
+        onMouseEnter={() => playPop()}
+        onClick={() => playClick()}
+      >
         <Link href="https://github.com/bryanmaraujo544?tab=repositories">
-          {texts.pt.seeMoreButton}
+          {texts[language].seeMoreButton}
         </Link>
       </button>
     </Container>

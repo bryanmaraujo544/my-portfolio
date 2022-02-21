@@ -1,7 +1,8 @@
-import { useState } from 'react';
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import { useContext, useState } from 'react';
+import { useSound } from 'hooks/useSound';
 import Image from 'next/image';
 import { Link as LinkScroll } from 'react-scroll';
-import useSound from 'use-sound';
 import { motion } from 'framer-motion';
 import { CgMenuRight } from 'react-icons/cg';
 import { AiOutlineSetting } from 'react-icons/ai';
@@ -9,6 +10,7 @@ import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 
 import logo from 'assets/logo.png';
 import { MobileMenu } from 'components/MobileMenu';
+import { SettingsContext } from 'contexts/SettingsContext';
 import {
   Container,
   MainContainer,
@@ -26,10 +28,10 @@ import ClickSound from '../../../public/click_04.mp3';
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isSoundOn, setIsSoundOn] = useState(true);
-  const [language, setLanguage] = useState('pt');
 
-  console.log({ setIsSoundOn, setLanguage });
+  // prettier-ignore
+  // eslint-disable-next-line max-len
+  const { isSoundOn, language, handleToggleLanguage, handleToggleSound } = useContext(SettingsContext);
 
   const [playPop] = useSound(PopSound);
   const [playClick] = useSound(ClickSound);
@@ -43,8 +45,6 @@ export const Header = () => {
     setIsSettingsOpen((prevState) => !prevState);
   }
 
-  console.log({ isSettingsOpen });
-
   return (
     <Container>
       <div className="logo">
@@ -52,14 +52,15 @@ export const Header = () => {
       </div>
       <MainContainer as={motion.div}>
         <ul>
-          {texts.pt.listSections.map(({ title, targetSection }) => (
+          {texts[language].listSections.map(({ title, targetSection }) => (
             <LinkScroll
               to={targetSection}
               smooth
               offset={-24}
               onClick={() => playClick()}
+              key={title}
             >
-              <li key={title} className="list-item">
+              <li className="list-item" onClick={() => playClick()}>
                 {title}
               </li>
             </LinkScroll>
@@ -72,7 +73,7 @@ export const Header = () => {
             onMouseEnter={() => playPop()}
             onClick={() => playClick()}
           >
-            {texts.pt.resumeButton}
+            {texts[language].resumeButton}
           </button>
           <ConfigContainer>
             <button
@@ -90,14 +91,18 @@ export const Header = () => {
                 display: isSettingsOpen ? 'flex' : 'none',
               }}
             >
-              <button type="button">
+              <button type="button" onClick={handleToggleSound}>
                 {isSoundOn ? (
                   <GiSoundOn className="sound-icon" />
                 ) : (
                   <GiSoundOff className="sound-icon" />
                 )}
               </button>
-              <button type="button" className="language-container">
+              <button
+                type="button"
+                className="language-container"
+                onClick={handleToggleLanguage}
+              >
                 <div className="lang-img">
                   {language === 'pt' ? (
                     <Image src={PtImg} layout="fill" />

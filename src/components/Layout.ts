@@ -14,6 +14,6 @@ export const Layout = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 3.2rem;
-    gap: 7.2rem;
+    gap: 9.6rem;
   }
 `;

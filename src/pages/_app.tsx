@@ -1,11 +1,14 @@
 import type { AppProps } from 'next/app';
 import GlobalStyles from 'styles/global';
+import { SettingsContextProvider } from '../contexts/SettingsContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <SettingsContextProvider>
+        <Component {...pageProps} />
+      </SettingsContextProvider>
     </>
   );
 }

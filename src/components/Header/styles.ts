@@ -6,7 +6,6 @@ export const Container = styled.header`
   align-items: center;
   height: 9.6rem;
   width: 100%;
-  /* overflow-x: hidden; */
 
   .logo {
     height: 4.8rem;
@@ -99,6 +98,7 @@ export const RightButtons = styled.div`
     color: #fff;
     font-size: 1.4rem;
     transition: all 0.25s ease-in;
+
     &:hover {
       background: #00a8e8;
     }
