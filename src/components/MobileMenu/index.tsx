@@ -98,12 +98,23 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               display: isSettingsOpen ? 'flex' : 'none',
             }}
           >
-            <button type="button" onClick={handleToggleSound}>
-              {isSoundOn ? (
+            <button
+              type="button"
+              onClick={handleToggleSound}
+              className="sound-btn"
+            >
+              <motion.div
+                className="sound-icon-container"
+                animate={{ opacity: isSoundOn ? 1 : 0 }}
+              >
                 <GiSoundOn className="sound-icon" />
-              ) : (
+              </motion.div>
+              <motion.div
+                className="sound-icon-container"
+                animate={{ opacity: isSoundOn ? 0 : 1 }}
+              >
                 <GiSoundOff className="sound-icon" />
-              )}
+              </motion.div>
             </button>
             <button
               type="button"

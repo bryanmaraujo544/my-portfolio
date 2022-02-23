@@ -97,16 +97,29 @@ export const ConfigContainer = styled.div`
     flex-direction: row;
     gap: 1.6rem;
     width: auto;
-    padding: 0.4rem 1.6rem;
+    padding: 0.8rem 1.6rem;
     background: #00171f;
     border-radius: 0.2rem;
     z-index: 40;
     margin-left: 1.6rem;
 
-    .sound-icon {
-      font-size: 3.2rem;
-      color: #fff;
-      margin-top: 0.6rem;
+    .sound-btn {
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+
+      .sound-icon-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        .sound-icon {
+          font-size: 3rem;
+          color: #fff;
+        }
+      }
     }
 
     .lang-img {
