@@ -111,11 +111,19 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               onClick={handleToggleLanguage}
             >
               <div className="lang-img">
-                {language === 'pt' ? (
+                <motion.div
+                  animate={{ opacity: language === 'pt' ? 1 : 0 }}
+                  className="img"
+                >
                   <Image src={PtImg} layout="fill" />
-                ) : (
+                </motion.div>
+
+                <motion.div
+                  animate={{ opacity: language === 'en' ? 1 : 0 }}
+                  className="img"
+                >
                   <Image src={EnImg} layout="fill" />
-                )}
+                </motion.div>
               </div>
             </button>
           </motion.div>

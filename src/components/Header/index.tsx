@@ -91,12 +91,23 @@ export const Header = () => {
                 display: isSettingsOpen ? 'flex' : 'none',
               }}
             >
-              <button type="button" onClick={handleToggleSound}>
-                {isSoundOn ? (
+              <button
+                type="button"
+                onClick={handleToggleSound}
+                className="sound-btn"
+              >
+                <motion.div
+                  className="sound-icon-container"
+                  animate={{ opacity: isSoundOn ? 1 : 0 }}
+                >
                   <GiSoundOn className="sound-icon" />
-                ) : (
+                </motion.div>
+                <motion.div
+                  className="sound-icon-container"
+                  animate={{ opacity: isSoundOn ? 0 : 1 }}
+                >
                   <GiSoundOff className="sound-icon" />
-                )}
+                </motion.div>
               </button>
               <button
                 type="button"
@@ -104,11 +115,19 @@ export const Header = () => {
                 onClick={handleToggleLanguage}
               >
                 <div className="lang-img">
-                  {language === 'pt' ? (
+                  <motion.div
+                    animate={{ opacity: language === 'pt' ? 1 : 0 }}
+                    className="img"
+                  >
                     <Image src={PtImg} layout="fill" />
-                  ) : (
+                  </motion.div>
+
+                  <motion.div
+                    animate={{ opacity: language === 'en' ? 1 : 0 }}
+                    className="img"
+                  >
                     <Image src={EnImg} layout="fill" />
-                  )}
+                  </motion.div>
                 </div>
               </button>
             </motion.div>

@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode } from 'react';
+
+import { useLocalStorage } from 'hooks/useLocalStorage';
 
 interface CtxProps {
   isSoundOn: boolean;
@@ -15,15 +17,15 @@ export const SettingsContextProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [isSoundOn, setIsSoundOn] = useState(true);
-  const [language, setLanguage] = useState<'pt' | 'en'>('pt');
+  const [isSoundOn, setIsSoundOn] = useLocalStorage('isSoundOn', true);
+  const [language, setLanguage] = useLocalStorage('language', 'pt');
 
   function handleToggleLanguage() {
-    setLanguage((prevLang) => (prevLang === 'pt' ? 'en' : 'pt'));
+    setLanguage(language === 'pt' ? 'en' : 'pt');
   }
 
   function handleToggleSound() {
-    setIsSoundOn((prevState) => !prevState);
+    setIsSoundOn(!isSoundOn);
   }
 
   return (

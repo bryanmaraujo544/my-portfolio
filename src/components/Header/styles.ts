@@ -146,10 +146,23 @@ export const ConfigContainer = styled.div`
     border-radius: 0.2rem;
     z-index: 40;
 
-    .sound-icon {
-      font-size: 2.4rem;
-      color: #fff;
-      margin-top: -0.2rem;
+    .sound-btn {
+      position: relative;
+      width: 2.4rem;
+      height: 2.4rem;
+      display: flex;
+      align-items: center;
+
+      .sound-icon-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .sound-icon {
+          font-size: 2.4rem;
+          color: #fff;
+          margin-top: -0.2rem;
+        }
+      }
     }
 
     .lang-img {
@@ -158,10 +171,19 @@ export const ConfigContainer = styled.div`
       width: 2.4rem;
       background: #003459;
       display: flex;
-      align-items: center;
+      /* align-items: center; */
+      flex-direction: column;
+
+      .img {
+        padding: 9px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
 
       img {
         opacity: 0.75;
+
         object-fit: cover;
       }
     }

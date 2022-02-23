@@ -77,7 +77,7 @@ export const ConfigContainer = styled.div`
     display: flex;
 
     .settings-icon {
-      font-size: 2.4rem;
+      font-size: 3rem;
       color: #fff;
       transition: color 0.2s ease-in;
 
@@ -97,31 +97,35 @@ export const ConfigContainer = styled.div`
     flex-direction: row;
     gap: 1.6rem;
     width: auto;
-    height: 4.8rem;
-
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 1.6rem;
     background: #00171f;
     border-radius: 0.2rem;
     z-index: 40;
     margin-left: 1.6rem;
 
     .sound-icon {
-      font-size: 2.4rem;
+      font-size: 3.2rem;
       color: #fff;
       margin-top: 0.6rem;
     }
 
     .lang-img {
       position: relative;
-      height: 1.6rem;
-      width: 2.4rem;
+      height: 2.2rem;
+      width: 3rem;
       background: #00171f;
       display: flex;
       align-items: center;
 
-      img {
-        opacity: 0.75;
-        object-fit: cover;
+      .img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+          opacity: 0.75;
+          object-fit: cover;
+        }
       }
     }
   }
