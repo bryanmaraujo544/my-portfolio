@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { AiOutlineClose, AiOutlineSetting } from 'react-icons/ai';
 import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
-import useSound from 'use-sound';
+import { useSound } from 'hooks/useSound';
 
 import { SettingsContext } from 'contexts/SettingsContext';
 import { Container, Overlay, ConfigContainer } from './styles';
