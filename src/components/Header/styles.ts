@@ -135,7 +135,7 @@ export const ConfigContainer = styled.div`
   .settings {
     position: absolute;
     top: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 0.4rem;
