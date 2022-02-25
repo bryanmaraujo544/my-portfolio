@@ -3,13 +3,8 @@ import { useContext, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { AiOutlineClose, AiOutlineSetting } from 'react-icons/ai';
 import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
-<<<<<<< HEAD
-import useSound from 'use-sound';
-import { Link as LinkScroll } from 'react-scroll';
-=======
 import { useSound } from 'hooks/useSound';
->>>>>>> 0f3bd44deaf0a122235e1be2a64e781ab27a6d61
-
+import { Link as LinkScroll } from 'react-scroll';
 import { SettingsContext } from 'contexts/SettingsContext';
 import { Container, Overlay, ConfigContainer } from './styles';
 import texts from './text-content';

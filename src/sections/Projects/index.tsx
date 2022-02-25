@@ -6,6 +6,8 @@ import { SectionTitle } from 'components/SectionTitle';
 import useSound from 'use-sound';
 import { useContext } from 'react';
 import { SettingsContext } from 'contexts/SettingsContext';
+import { useScrollAnimation } from 'hooks/useScrollAnimation';
+import { motion } from 'framer-motion';
 import { Container } from './styles';
 import texts from './text-content';
 
@@ -17,8 +19,15 @@ export const Projects = () => {
   const [playClick] = useSound(ClickSound);
   const { language } = useContext(SettingsContext);
 
+  const { sectionRef, controls } = useScrollAnimation();
+
   return (
-    <Container id="projects">
+    <Container
+      id="projects"
+      ref={sectionRef}
+      as={motion.section}
+      animate={controls}
+    >
       <SectionTitle>{texts[language].title}</SectionTitle>
       <div className="projects-container">
         {texts[language].projects.map((project, i) => (
