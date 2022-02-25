@@ -4,12 +4,14 @@ import { motion, useAnimation } from 'framer-motion';
 import { AiOutlineClose, AiOutlineSetting } from 'react-icons/ai';
 import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 import useSound from 'use-sound';
+import { Link as LinkScroll } from 'react-scroll';
 
 import { SettingsContext } from 'contexts/SettingsContext';
 import { Container, Overlay, ConfigContainer } from './styles';
 import texts from './text-content';
+
 import PopSound from '../../../public/pop_drip.mp3';
-// import ClickSound from '../../../public/click_04.mp3';
+import ClickSound from '../../../public/click_04.mp3';
 import PtImg from '../../assets/portuguese.png';
 import EnImg from '../../assets/english.jpg';
 
@@ -49,6 +51,7 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const { isSoundOn, language, handleToggleLanguage, handleToggleSound } = useContext(SettingsContext);
 
   const [playPop] = useSound(PopSound);
+  const [playClick] = useSound(ClickSound);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -64,6 +67,11 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
     setIsSettingsOpen((prevState) => !prevState);
   }
 
+  function handleLinkClick() {
+    playClick();
+    setIsMenuOpen(false);
+  }
+
   return (
     <Overlay
       as={motion.div}
@@ -72,16 +80,35 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
     >
       <Container as={motion.aside} variants={MenuVariants}>
         <AiOutlineClose
-          onClick={() => setIsMenuOpen(false)}
+          onClick={() => {
+            setIsMenuOpen(false);
+            playClick();
+          }}
           className="close-icon"
         />
         <ul>
-          {texts[language].listSections.map(({ title }) => (
-            <li key={title} className="list-item">
-              {title}
-            </li>
+          {texts[language].listSections.map(({ title, targetSection }) => (
+            <LinkScroll
+              to={targetSection}
+              smooth
+              offset={-24}
+              onClick={() => handleLinkClick()}
+              key={title}
+            >
+              <li key={title} className="list-item">
+                {title}
+              </li>
+            </LinkScroll>
           ))}
         </ul>
+        <button
+          type="button"
+          className="resume-btn"
+          onMouseEnter={() => playPop()}
+          onClick={() => playClick()}
+        >
+          {texts[language].resumeButton}
+        </button>
         <ConfigContainer>
           <button
             type="button"

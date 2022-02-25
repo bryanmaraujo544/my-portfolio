@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import { AiOutlineInstagram } from 'react-icons/ai';
@@ -39,8 +40,8 @@ export const Contact = () => {
       <SectionTitle>{texts[language].title}</SectionTitle>
       <p className="description">{texts[language].description}</p>
       <div className="social-medias">
-        {socialMedias.map(({ icon: Icon, url }) => (
-          <Link href={url}>
+        {socialMedias.map(({ icon: Icon, url }, i) => (
+          <Link href={url} key={i}>
             <a className="social-media">
               <Icon
                 className="icon"

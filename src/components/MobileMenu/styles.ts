@@ -58,6 +58,18 @@ export const Container = styled.aside`
       }
     }
   }
+
+  .resume-btn {
+    background: none;
+    margin-top: 3.6rem;
+    align-self: flex-start;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1.5px solid #00a8e8;
+    border-radius: 0.2rem;
+    padding: 0.4rem 1.2rem;
+    color: #fff;
+  }
 `;
 
 export const ConfigContainer = styled.div`

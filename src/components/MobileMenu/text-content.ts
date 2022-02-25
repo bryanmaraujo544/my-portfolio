@@ -1,5 +1,6 @@
 interface DataProps {
   listSections: { title: string; targetSection: string }[];
+  resumeButton: string;
 }
 
 interface Props {
@@ -27,6 +28,7 @@ const textContent: Props = {
         targetSection: 'contact',
       },
     ],
+    resumeButton: 'Currículo',
   },
   en: {
     listSections: [
@@ -47,6 +49,7 @@ const textContent: Props = {
         targetSection: 'contact',
       },
     ],
+    resumeButton: 'Resume',
   },
 };
 

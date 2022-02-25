@@ -37,6 +37,7 @@ export const Header = () => {
   const [playClick] = useSound(ClickSound);
 
   function handleToggleMenu() {
+    playPop();
     setIsMenuOpen((prevState) => !prevState);
   }
 
