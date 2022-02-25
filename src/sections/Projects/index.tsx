@@ -8,9 +8,11 @@ import { useContext } from 'react';
 import { SettingsContext } from 'contexts/SettingsContext';
 import { useScrollAnimation } from 'hooks/useScrollAnimation';
 import { motion } from 'framer-motion';
+
+import { propagationContainerVariants } from 'variants/propagationContainerVariants';
+import { propagationChildVariants } from 'variants/propagationChildVariants';
 import { Container } from './styles';
 import texts from './text-content';
-
 import PopSound from '../../../public/pop_drip.mp3';
 import ClickSound from '../../../public/click_04.mp3';
 
@@ -19,7 +21,7 @@ export const Projects = () => {
   const [playClick] = useSound(ClickSound);
   const { language } = useContext(SettingsContext);
 
-  const { sectionRef, controls } = useScrollAnimation();
+  const { sectionRef, controls } = useScrollAnimation({});
 
   return (
     <Container
@@ -29,11 +31,21 @@ export const Projects = () => {
       animate={controls}
     >
       <SectionTitle>{texts[language].title}</SectionTitle>
-      <div className="projects-container">
+      <motion.div
+        className="projects-container"
+        variants={propagationContainerVariants}
+        initial="hidden"
+        animate="show"
+      >
         {texts[language].projects.map((project, i) => (
-          <Project key={i} projectInfos={project} isLeft={i % 2 === 1} />
+          <Project
+            key={i}
+            projectInfos={project}
+            isLeft={i % 2 === 1}
+            variants={propagationChildVariants}
+          />
         ))}
-      </div>
+      </motion.div>
       <button
         type="button"
         className="see-more"

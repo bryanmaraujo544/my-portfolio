@@ -37,7 +37,7 @@ export const Contact = () => {
   const [playPop] = useSound(PopSound);
   const { language } = useContext(SettingsContext);
 
-  const { sectionRef, controls } = useScrollAnimation();
+  const { sectionRef, controls } = useScrollAnimation({});
 
   return (
     <Container

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { FiGithub } from 'react-icons/fi';
 import { IoOpenOutline } from 'react-icons/io5';
 import { useSound } from 'hooks/useSound';
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from 'hooks/useScrollAnimation';
 import {
   Container,
   Uptitle,
@@ -29,13 +31,38 @@ interface ProjectProps {
 interface Props {
   isLeft: boolean;
   projectInfos: ProjectProps;
+  variants: any;
 }
 
-export const Project = ({ isLeft, projectInfos }: Props) => {
+export const Project = ({ isLeft, projectInfos, variants }: Props) => {
   const [playClick] = useSound(ClickSound);
+  const { sectionRef, controls } = useScrollAnimation({
+    showAnimation: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 90,
+      },
+    },
+    hiddenAnimation: {
+      x: isLeft ? 100 : -100,
+      opacity: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+      },
+    },
+  });
 
   return (
-    <Container isLeft={isLeft}>
+    <Container
+      isLeft={isLeft}
+      as={motion.div}
+      ref={sectionRef}
+      variants={variants}
+      animate={controls}
+    >
       <div className="image-container">
         <Image
           src={projectInfos.imageSrc}

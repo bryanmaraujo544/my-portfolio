@@ -13,7 +13,7 @@ import texts from './text-content';
 
 export const About = () => {
   const { language } = useContext(SettingsContext);
-  const { sectionRef, controls } = useScrollAnimation();
+  const { sectionRef, controls } = useScrollAnimation({});
 
   return (
     <Container
