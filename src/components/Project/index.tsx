@@ -42,7 +42,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       opacity: 1,
       transition: {
         type: 'spring',
-        stiffness: 40,
+        stiffness: 30,
       },
     },
     hiddenAnimation: {

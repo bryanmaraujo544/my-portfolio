@@ -25,7 +25,7 @@ export const InitialScreen = () => {
         <p className="description">{texts[language].mainInfos.description}</p>
         <div className="arrow-icon">
           <Link to="about" smooth="true" offset={-24} onClick={() => playPop()}>
-            <Image src={arrow} layout="fill" />
+            <Image src={arrow} layout="fill" alt="arrow" />
           </Link>
         </div>
       </MainInfos>

@@ -120,14 +120,14 @@ export const Header = () => {
                     animate={{ opacity: language === 'pt' ? 1 : 0 }}
                     className="img"
                   >
-                    <Image src={PtImg} layout="fill" />
+                    <Image src={PtImg} layout="fill" alt="portuguese-pt" />
                   </motion.div>
 
                   <motion.div
                     animate={{ opacity: language === 'en' ? 1 : 0 }}
                     className="img"
                   >
-                    <Image src={EnImg} layout="fill" />
+                    <Image src={EnImg} layout="fill" alt="english-en" />
                   </motion.div>
                 </div>
               </button>
