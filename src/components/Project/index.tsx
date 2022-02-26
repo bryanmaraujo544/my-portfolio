@@ -42,7 +42,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       opacity: 1,
       transition: {
         type: 'spring',
-        stiffness: 90,
+        stiffness: 40,
       },
     },
     hiddenAnimation: {
@@ -50,7 +50,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       opacity: 0,
       transition: {
         type: 'spring',
-        stiffness: 100,
+        stiffness: 40,
       },
     },
   });
@@ -61,14 +61,19 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       as={motion.div}
       ref={sectionRef}
       variants={variants}
+      initial={{ x: isLeft ? 100 : -100 }}
       animate={controls}
     >
       <div className="image-container">
-        <Image
-          src={projectInfos.imageSrc}
-          layout="fill"
-          alt="project-preview"
-        />
+        <Link href={projectInfos.githubURL}>
+          <a>
+            <Image
+              src={projectInfos.imageSrc}
+              layout="fill"
+              alt="project-preview"
+            />
+          </a>
+        </Link>
       </div>
       <div className="infos-container">
         <Uptitle>{projectInfos.uptitle}</Uptitle>
