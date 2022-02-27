@@ -2,8 +2,21 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
+export const SkillsContainer = styled.section`
+  display: flex;
   align-items: center;
   gap: 2.4rem;
+  width: 100%;
+  margin-top: -2.4rem;
+
+  @media (max-width: 468px) {
+    gap: 1.6rem;
+  }
 
   .arrow-icon {
     position: relative;
@@ -47,8 +60,12 @@ export const Container = styled.section`
     overflow-y: visible;
     height: 16.4rem;
 
+    @media (max-width: 768px) {
+      height: 30rem;
+    }
+
     @media (max-width: 468px) {
-      height: 20rem;
+      gap: 3.2rem;
     }
   }
 `;

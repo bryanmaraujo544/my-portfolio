@@ -9,21 +9,25 @@ export const Container = styled.div`
   min-width: 45%;
   padding: 2.4rem;
   background: #fff;
-  font-size: 1.8rem;
   z-index: 1;
   transform-style: preserve-3d;
+  text-align: center;
 
-  @media (max-width: 468px) {
-    text-align: center;
-    min-height: calc(100% - 4.8rem);
-    height: auto;
+  p {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    /* min-height: calc(100% - 4.8rem); */
+    height: 20rem;
+    /* height: ; */
   }
 
   &::after {
     content: '';
     position: absolute;
-    left: 1.2rem;
-    top: 1.2rem;
+    left: 0.8rem;
+    top: 0.8rem;
     width: 100%;
     height: 100%;
     border: 0.2rem solid #00a8e8;

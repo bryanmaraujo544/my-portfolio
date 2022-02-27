@@ -2,17 +2,21 @@
 /* eslint-disable react/no-array-index-key */
 import { useContext, useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 import { SkillCard } from 'components/SkillCard';
 import ArrowIcon from 'assets/arrow.svg';
 import { SettingsContext } from 'contexts/SettingsContext';
-import { Container } from './styles';
+import { SectionTitle } from 'components/SectionTitle';
+import { useScrollAnimation } from 'hooks/useScrollAnimation';
+import { Container, SkillsContainer } from './styles';
 import texts from './text-content';
 
 export const Skills = () => {
   const { language } = useContext(SettingsContext);
   const [skills, setSkills] = useState<any>(texts[language].skills);
+  const controls = useAnimation();
+  const { sectionRef, controls: scrollControls } = useScrollAnimation({});
 
   // prettier-ignore
   function handleNextSkill() {
@@ -56,18 +60,30 @@ export const Skills = () => {
   }
 
   return (
-    <Container>
-      <div className="arrow-icon" onClick={() => handleLastSkill()}>
-        <Image src={ArrowIcon} layout="fill" />
-      </div>
-      <motion.div className="skills-cards-container" layout>
-        {skills.map(({ text }: any) => (
-          <SkillCard text={text} key={text} />
-        ))}
-      </motion.div>
-      <div className="arrow-icon" onClick={() => handleNextSkill()}>
-        <Image src={ArrowIcon} layout="fill" />
-      </div>
+    <Container
+      id="skills"
+      as={motion.section}
+      animate={scrollControls}
+      ref={sectionRef}
+    >
+      <SectionTitle>{texts[language].title}</SectionTitle>
+      <SkillsContainer>
+        <div className="arrow-icon" onClick={() => handleNextSkill()}>
+          <Image src={ArrowIcon} layout="fill" />
+        </div>
+        <motion.div
+          className="skills-cards-container"
+          animate={controls}
+          layout
+        >
+          {skills.map(({ text }: any) => (
+            <SkillCard text={text} key={text} />
+          ))}
+        </motion.div>
+        <div className="arrow-icon" onClick={() => handleLastSkill()}>
+          <Image src={ArrowIcon} layout="fill" />
+        </div>
+      </SkillsContainer>
     </Container>
   );
 };

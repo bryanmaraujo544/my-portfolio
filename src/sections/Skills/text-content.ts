@@ -1,4 +1,5 @@
 interface DataProps {
+  title: string;
   skills: { text: string }[];
 }
 
@@ -9,40 +10,54 @@ interface Props {
 
 const textContent: Props = {
   pt: {
+    title: 'Habilidades',
     skills: [
       {
-        text: '1Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Desenvolvimento de interfaces altamente dinâmicas e perfomáticas',
       },
       {
-        text: '2Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: "Grande experiência em consumo de Api's",
       },
       {
-        text: '3Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Construção de layouts responsivos e acessíveis',
       },
       {
-        text: '4Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Experiência com diversas formas de estilização no React',
       },
       {
-        text: '5Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Experiência com diferentes gerenciadores de estado no React',
+      },
+      {
+        text: 'Implementação de animações nas aplicações',
+      },
+      {
+        text: 'Conhecimento em técnicas de Clean Code',
       },
     ],
   },
   en: {
+    title: 'Skills',
     skills: [
       {
-        text: 'Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Development of perfomatic and highly dynamic interfaces',
       },
       {
-        text: 'Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: "Large experience in Api's consume",
       },
       {
-        text: 'Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Accessibles and responsives layout development ',
       },
       {
-        text: 'Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Experince with different ways to style React Apps',
       },
       {
-        text: 'Desenvolver interfaces altamente dinâmicas e perfomáticas',
+        text: 'Experience with distinct React state managers',
+      },
+      {
+        text: 'Efficiency in animate React applications',
+      },
+      {
+        text: 'Clean Code techniques knowledge',
       },
     ],
   },
