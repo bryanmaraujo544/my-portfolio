@@ -66,7 +66,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       animate={controls}
     >
       <div className="image-container">
-        <Link href={projectInfos.githubURL}>
+        <Link href={projectInfos.projectURL || projectInfos.githubURL}>
           <a target="_blank">
             <Image
               src={projectInfos.imageSrc}
