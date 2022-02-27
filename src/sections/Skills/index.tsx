@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable react/no-array-index-key */
 import { useContext, useState } from 'react';
 import Image from 'next/image';
@@ -12,7 +13,6 @@ import texts from './text-content';
 export const Skills = () => {
   const { language } = useContext(SettingsContext);
   const [skills, setSkills] = useState<any>(texts[language].skills);
-  console.log(skills);
 
   // prettier-ignore
   function handleNextSkill() {
@@ -37,7 +37,23 @@ export const Skills = () => {
     setSkills(newSkills);
   }
 
-  function handleLastSkill() {}
+  // a b c d e
+  function handleLastSkill() {
+    const newSkills = [];
+    for (let i = 0; i < skills.length - 1; i += 1) {
+      // If the i is equal to 0, we put the next position of the original state
+      // And with that we don't put the first value of the original state in first position of
+      // new state. We will only put the first element of the original state in the last position
+      // of the new state in the last time the loop runs.
+      newSkills.push(skills[i + 1]);
+
+      if (i === skills.length - 2) {
+        newSkills[skills.length - 1] = skills[0];
+      }
+    }
+
+    setSkills(newSkills);
+  }
 
   return (
     <Container>
