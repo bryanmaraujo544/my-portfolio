@@ -90,7 +90,7 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             <LinkScroll
               to={targetSection}
               smooth
-              offset={-24}
+              offset={-72}
               onClick={() => handleLinkClick()}
               key={title}
             >

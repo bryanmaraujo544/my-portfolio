@@ -42,7 +42,8 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       opacity: 1,
       transition: {
         type: 'spring',
-        stiffness: 30,
+        stiffness: 20,
+        damping: 7,
       },
     },
     hiddenAnimation: {
@@ -66,7 +67,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
     >
       <div className="image-container">
         <Link href={projectInfos.githubURL}>
-          <a>
+          <a target="_blank">
             <Image
               src={projectInfos.imageSrc}
               layout="fill"
@@ -90,13 +91,13 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
         </Tags>
         <Buttons>
           <Link href={projectInfos.githubURL}>
-            <a onClick={() => playClick()}>
+            <a target="_blank" onClick={() => playClick()}>
               <FiGithub className="icon" />
             </a>
           </Link>
           {projectInfos.projectURL && (
             <Link href={projectInfos.projectURL}>
-              <a onClick={() => playClick()}>
+              <a target="_blank" onClick={() => playClick()}>
                 <IoOpenOutline className="icon" />
               </a>
             </Link>

@@ -57,7 +57,7 @@ export const Header = () => {
             <LinkScroll
               to={targetSection}
               smooth
-              offset={-24}
+              offset={-72}
               onClick={() => playClick()}
               key={title}
             >
