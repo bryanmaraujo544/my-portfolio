@@ -7,6 +7,7 @@ import { About } from 'sections/About';
 import { Projects } from 'sections/Projects';
 import { Contact } from 'sections/Contact';
 import { Footer } from 'sections/Footer';
+import { Skills } from 'sections/Skills';
 
 const Home: NextPage = () => (
   <>
@@ -22,6 +23,7 @@ const Home: NextPage = () => (
     <Layout>
       <InitialScreen />
       <About />
+      <Skills />
       <Projects />
       <Contact />
       <Footer />
