@@ -11,6 +11,7 @@ import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 import logo from 'assets/logo.png';
 import { MobileMenu } from 'components/MobileMenu';
 import { SettingsContext } from 'contexts/SettingsContext';
+import { propagationChildVariants } from 'variants/propagationChildVariants';
 import {
   Container,
   MainContainer,
@@ -47,7 +48,7 @@ export const Header = () => {
   }
 
   return (
-    <Container>
+    <Container as={motion.div} variants={propagationChildVariants}>
       <div className="logo">
         <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
       </div>

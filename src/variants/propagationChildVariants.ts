@@ -1,10 +1,14 @@
-export const propagationChildVariants = ({ isLeft }: { isLeft: boolean }) => ({
+export const propagationChildVariants = {
   hidden: {
     opacity: 0,
-    x: isLeft ? -100 : 100,
+    y: -100,
   },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+    },
   },
-});
+};
