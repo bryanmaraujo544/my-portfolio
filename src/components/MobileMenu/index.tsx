@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import { useContext, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
@@ -6,6 +7,7 @@ import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 import { useSound } from 'hooks/useSound';
 import { Link as LinkScroll } from 'react-scroll';
 import { SettingsContext } from 'contexts/SettingsContext';
+import Link from 'next/link';
 import { Container, Overlay, ConfigContainer } from './styles';
 import texts from './text-content';
 
@@ -100,14 +102,19 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             </LinkScroll>
           ))}
         </ul>
-        <button
-          type="button"
-          className="resume-btn"
-          onMouseEnter={() => playPop()}
-          onClick={() => playClick()}
-        >
-          {texts[language].resumeButton}
-        </button>
+
+        <Link href="https://www.canva.com/design/DAEaQvDNjfk/4CswO--WGflk6CzEmhEFUQ/view?utm_content=DAEaQvDNjfk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+          <a target="_blank">
+            <button
+              type="button"
+              className="resume-btn"
+              onMouseEnter={() => playPop()}
+              onClick={() => playClick()}
+            >
+              {texts[language].resumeButton}
+            </button>
+          </a>
+        </Link>
         <ConfigContainer>
           <button
             type="button"

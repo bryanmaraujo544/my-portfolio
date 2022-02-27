@@ -1,6 +1,6 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable react/no-array-index-key */
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -17,6 +17,10 @@ export const Skills = () => {
   const [skills, setSkills] = useState<any>(texts[language].skills);
   const controls = useAnimation();
   const { sectionRef, controls: scrollControls } = useScrollAnimation({});
+
+  useEffect(() => {
+    setSkills(texts[language].skills);
+  }, [language]);
 
   // prettier-ignore
   function handleNextSkill() {

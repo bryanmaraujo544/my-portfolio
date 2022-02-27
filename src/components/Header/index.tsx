@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useContext, useState } from 'react';
 import { useSound } from 'hooks/useSound';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Link as LinkScroll } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { CgMenuRight } from 'react-icons/cg';
@@ -69,14 +71,18 @@ export const Header = () => {
           ))}
         </ul>
         <RightButtons>
-          <button
-            type="button"
-            className="resume-btn"
-            onMouseEnter={() => playPop()}
-            onClick={() => playClick()}
-          >
-            {texts[language].resumeButton}
-          </button>
+          <Link href="https://www.canva.com/design/DAEaQvDNjfk/4CswO--WGflk6CzEmhEFUQ/view?utm_content=DAEaQvDNjfk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+            <a target="_blank">
+              <button
+                type="button"
+                className="resume-btn"
+                onMouseEnter={() => playPop()}
+                onClick={() => playClick()}
+              >
+                {texts[language].resumeButton}
+              </button>
+            </a>
+          </Link>
           <ConfigContainer>
             <button
               type="button"

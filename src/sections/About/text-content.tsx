@@ -26,7 +26,7 @@ const textContent = {
         .
       </>,
       <>
-        Atualmente meus estudos e projetos são para web, onde desenvolvo o
+        Atualmente meus estudos e projetos são para web, onde desenvolvo o{' '}
         <b>Front-end</b> e o <b>Back-end</b> da aplicação. Não me considero
         ainda um <b>Desenvolvedor Full-stack</b>, pois creio que consigo assumir
         responsabilidades com mais preparo no front-end, porém estou em busca de
@@ -37,15 +37,15 @@ const textContent = {
   en: {
     title: 'About me',
     mainText: [
-      'Hey! I am Bryan and I am passionate for build web aplicattions. I look for improve my habilities every day mixing the thery with a lot of practice',
+      'Hey! I am Bryan and I am passionate for build web aplicattions. I am looking for improve my habilities every single day mixing the studies of theory with a lot of practice',
       <>
-        My journey has started at the beginning of 2020 when I've enrolled at
-        Systems Development technical course Sistemas. After 1 year studying{' '}
+        My study journey has started at the beginning of 2020 when I've enrolled
+        at Systems Development technical course. After 1 year studying{' '}
         <b>HTML</b>, <b>CSS</b> and <b>Vanilla JavaScript</b>, I've started to
         study the library <b>React</b>, and after some time <b>Node.js</b>.
       </>,
       <>
-        Nowadays my studies and projects are for the web, where I build the
+        Nowadays my studies and projects are for the web, where I build the{' '}
         <b>Front-end</b> and the <b>Back-end</b> of the application. I do not
         consider myself a <b>Full-Stack developer</b> yet, because I think I'm
         able to take responsibilities in Front-end with more confidence.

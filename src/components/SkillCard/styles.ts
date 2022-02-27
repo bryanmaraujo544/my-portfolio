@@ -26,7 +26,7 @@ export const Container = styled.div`
   &::after {
     content: '';
     position: absolute;
-    left: 0.8rem;
+    left: -1rem;
     top: 0.8rem;
     width: 100%;
     height: 100%;

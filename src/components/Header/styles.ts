@@ -98,7 +98,7 @@ export const RightButtons = styled.div`
     color: #fff;
     font-size: 1.4rem;
     transition: all 0.25s ease-in;
-    z-index: 999;
+    z-index: 9999;
 
     &:hover {
       background: #00a8e8;
