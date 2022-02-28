@@ -29,6 +29,14 @@ const global = createGlobalStyle`
   html {
     font-size: 62.5%;
 
+    @media (min-width: 1720px) {
+      font-size: 12px;
+    }
+
+    @media (min-width: 2000px) {
+      font-size: 15px;
+    }
+
     @media (max-width: 968px) {
       font-size: 9px;
     }
