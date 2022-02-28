@@ -24,7 +24,7 @@ const textContent: Props = {
     description: (
       <>
         I am currently looking for a job and I am available for any conversation
-        about. You cand reach me for my email: <b>bryanmaraujo544@gmail.com</b>,
+        about. You can reach me for my email: <b>bryanmaraujo544@gmail.com</b>,
         or in one of my social medias below.
       </>
     ),

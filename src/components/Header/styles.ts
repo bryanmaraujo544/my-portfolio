@@ -6,6 +6,7 @@ export const Container = styled.header`
   align-items: center;
   height: 9.6rem;
   width: 100%;
+  z-index: 999;
 
   .logo {
     height: 4.8rem;

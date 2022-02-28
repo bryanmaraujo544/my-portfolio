@@ -21,9 +21,9 @@ const Home: NextPage = () => (
     </Head>
     <Layout>
       <InitialScreen />
+      <Projects />
       <About />
       <Skills />
-      <Projects />
       <Contact />
       <Footer />
     </Layout>

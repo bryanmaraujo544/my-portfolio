@@ -19,7 +19,7 @@ export const useScrollAnimation = ({
 
     // prettier-ignore
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > sectionTop - window.innerHeight / 1.5) {
+      if (window.pageYOffset > sectionTop - window.innerHeight / 1.2) {
         controls.start(
           showAnimation
             ? showAnimation
