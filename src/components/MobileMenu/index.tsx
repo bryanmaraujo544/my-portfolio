@@ -95,6 +95,7 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               offset={-72}
               onClick={() => handleLinkClick()}
               key={title}
+              href={targetSection}
             >
               <li key={title} className="list-item">
                 {title}

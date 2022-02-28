@@ -32,7 +32,13 @@ export const InitialScreen = () => {
         <h3 className="subtitle">{texts[language].mainInfos.subtitle}</h3>
         <p className="description">{texts[language].mainInfos.description}</p>
         <div className="arrow-icon">
-          <Link to="about" smooth="true" offset={-24} onClick={() => playPop()}>
+          <Link
+            to="about"
+            smooth="true"
+            offset={-24}
+            onClick={() => playPop()}
+            href="#about"
+          >
             <Image src={arrow} layout="fill" alt="arrow" />
           </Link>
         </div>
