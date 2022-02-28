@@ -73,7 +73,7 @@ export const Skills = () => {
       <SectionTitle>{texts[language].title}</SectionTitle>
       <SkillsContainer>
         <div className="arrow-icon" onClick={() => handleNextSkill()}>
-          <Image src={ArrowIcon} layout="fill" />
+          <Image src={ArrowIcon} layout="fill" alt="arrow icon for come back" />
         </div>
         <motion.div
           className="skills-cards-container"
@@ -85,7 +85,11 @@ export const Skills = () => {
           ))}
         </motion.div>
         <div className="arrow-icon" onClick={() => handleLastSkill()}>
-          <Image src={ArrowIcon} layout="fill" />
+          <Image
+            src={ArrowIcon}
+            layout="fill"
+            alt="arrow icon to pass to next skill"
+          />
         </div>
       </SkillsContainer>
     </Container>
