@@ -18,7 +18,7 @@ const textContent: Props = {
   en: {
     text: (
       <>
-        Developed <b>Bryan Martins</b>
+        Developed by <b>Bryan Martins</b>
       </>
     ),
   },

@@ -13,14 +13,16 @@ export const Container = styled.div`
   transform-style: preserve-3d;
   text-align: center;
 
-  p {
-    font-size: 1.7rem;
+  @media (max-width: 468px) {
+    min-width: 65%;
   }
 
   @media (max-width: 768px) {
-    /* min-height: calc(100% - 4.8rem); */
     height: 20rem;
-    /* height: ; */
+  }
+
+  p {
+    font-size: 1.6rem;
   }
 
   &::after {

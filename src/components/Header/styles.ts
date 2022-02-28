@@ -170,7 +170,7 @@ export const ConfigContainer = styled.div`
       position: relative;
       height: 1.6rem;
       width: 2.4rem;
-      background: #003459;
+      background: #00171f;
       display: flex;
       /* align-items: center; */
       flex-direction: column;

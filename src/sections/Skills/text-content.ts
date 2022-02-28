@@ -39,22 +39,22 @@ const textContent: Props = {
     title: 'Skills',
     skills: [
       {
-        text: 'Development of perfomatic and highly dynamic interfaces',
+        text: 'Development of highly dynamic interfaces with great performance',
       },
       {
         text: "Large experience in Api's consume",
       },
       {
-        text: 'Accessibles and responsives layout development ',
+        text: 'Accessibles and responsives layout development',
       },
       {
-        text: 'Experince with different ways to style React Apps',
+        text: 'Experience with different ways to style React Apps',
       },
       {
         text: 'Experience with distinct React state managers',
       },
       {
-        text: 'Efficiency in animate React applications',
+        text: 'Efficiency in animating React applications',
       },
       {
         text: 'Clean Code techniques knowledge',
