@@ -26,7 +26,7 @@ export const TextContainer = styled.div`
     line-height: 1.5;
 
     @media (max-width: 468px) {
-      font-size: 2rem;
+      font-size: 1.8rem;
       line-height: 1.7;
     }
 
@@ -37,7 +37,7 @@ export const TextContainer = styled.div`
     b {
       color: #00a8e8;
       @media (max-width: 468px) {
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.5;
       }
     }
