@@ -64,6 +64,7 @@ export const Header = () => {
               onClick={() => playClick()}
               key={title}
               spy
+              href={targetSection}
             >
               <li className="list-item" onClick={() => playClick()}>
                 {title}
