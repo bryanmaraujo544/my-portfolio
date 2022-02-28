@@ -34,7 +34,7 @@ const textContent = {
       </>,
       <>
         Meus objetivos são me especializar ainda mais no Front-end e no Back-end
-        e me tornar um <b>desenvolvedor Full-Stack.</b>
+        e me tornar um <b>Desenvolvedor Full-Stack.</b>
       </>,
     ],
   },
