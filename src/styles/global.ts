@@ -29,6 +29,24 @@ const global = createGlobalStyle`
   html {
     font-size: 62.5%;
 
+    ::-webkit-scrollbar {
+      width: 1.3rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #003459;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #007EA7;
+      box-shadow: 0 .2rem .8rem #00000030;
+      border-radius: 99rem;
+
+      &:hover {
+        background: #00A8E8;
+      }
+  }
+
     @media (min-width: 1720px) {
       font-size: 12px;
     }
