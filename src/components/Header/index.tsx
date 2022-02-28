@@ -63,6 +63,7 @@ export const Header = () => {
               offset={-72}
               onClick={() => playClick()}
               key={title}
+              spy
             >
               <li className="list-item" onClick={() => playClick()}>
                 {title}
