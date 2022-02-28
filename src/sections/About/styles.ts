@@ -21,7 +21,9 @@ export const Container = styled.section`
 
 export const TextContainer = styled.div`
   p {
-    color: #fff;
+    color: #ced4da;
+    font-size: 1.8rem;
+    line-height: 1.5;
 
     & + p {
       margin-top: 2rem;
