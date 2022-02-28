@@ -16,7 +16,7 @@ const textContent: Props = {
         text: 'Desenvolvimento de interfaces altamente dinâmicas e perfomáticas',
       },
       {
-        text: "Grande experiência em consumo de Api's",
+        text: "Grande experiência em consumo de API's",
       },
       {
         text: 'Construção de layouts responsivos e acessíveis',
@@ -42,7 +42,7 @@ const textContent: Props = {
         text: 'Development of highly dynamic interfaces with great performance',
       },
       {
-        text: "Large experience in Api's consume",
+        text: "Large experience in API's consume",
       },
       {
         text: 'Accessibles and responsives layout development',

@@ -25,12 +25,21 @@ export const TextContainer = styled.div`
     font-size: 1.8rem;
     line-height: 1.5;
 
+    @media (max-width: 468px) {
+      font-size: 2rem;
+      line-height: 1.7;
+    }
+
     & + p {
       margin-top: 2rem;
     }
 
     b {
       color: #00a8e8;
+      @media (max-width: 468px) {
+        font-size: 2rem;
+        line-height: 1.5;
+      }
     }
   }
 `;

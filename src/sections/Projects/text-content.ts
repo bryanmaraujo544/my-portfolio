@@ -44,7 +44,7 @@ const textContent: Projects = {
         uptitle: 'Projeto Front-End',
         title: 'Pomodoro App',
         description:
-          'Um timer onde é possível definir um tempo para realizar uma tarefa, e quando terminada um tempo de descanso é iniciado',
+          'Um timer onde é possível definir um tempo para realizar uma tarefa, e quando terminada um tempo de descanso é iniciado.',
         tags: ['React', 'PWA', 'TypeScript'],
         githubURL: 'https://github.com/bryanmaraujo544/pomodoro-app',
         projectURL: 'https://pomodoro-app-silk.vercel.app/',
@@ -64,7 +64,7 @@ const textContent: Projects = {
         uptitle: 'Projeto Full-Stack',
         title: 'Dev World',
         description:
-          'Uma aplicação para usuários encontrarem informações sobre desenvolvedores no Github',
+          'Uma aplicação para usuários encontrarem informações sobre desenvolvedores no Github.',
         tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
         githubURL: 'https://github.com/bryanmaraujo544/dev-world',
         projectURL: '',
@@ -73,7 +73,7 @@ const textContent: Projects = {
       {
         uptitle: 'Projeto Full-Stack',
         title: 'Week Planner',
-        description: 'Um app para usuários orgazinar suas tarefas semanais',
+        description: 'Um app para usuários orgazinar suas tarefas semanais.',
         tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT'],
         githubURL: 'https://github.com/bryanmaraujo544/week-planner-frontend',
         projectURL: 'https://week-planner.vercel.app/',
@@ -89,7 +89,7 @@ const textContent: Projects = {
         uptitle: 'Projeto Full-Stack',
         title: 'Calendar App',
         description:
-          'A calendar where the user can assign tasks to be completed in some date',
+          'A calendar where the user can assign tasks to be completed on some date.',
         tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
         githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
         projectURL: 'https://calendar-app-delta.vercel.app/login',
@@ -99,7 +99,7 @@ const textContent: Projects = {
         uptitle: 'Front-End Project',
         title: 'Pomodoro App',
         description:
-          'A timer based on pomodoro technique, where the user can set a time to make some activity and when is finished a rest time starts',
+          'A timer based on pomodoro technique, where the user can set a time to make some activity and when is finished a rest time starts.',
         tags: ['React', 'Next.js', 'Node.js', 'MySQL'],
         githubURL: 'https://github.com/bryanmaraujo544/week-planner-frontend',
         projectURL: 'http://week-planner.vercel.app/',
@@ -109,7 +109,7 @@ const textContent: Projects = {
         uptitle: 'Projeto Front-End',
         title: 'Weather App',
         description:
-          'An application where the user is able to search for a city name and receive the current and the weekly weather informations',
+          'An application where the user can search for a city name and receive the current and the weekly weather information.',
         tags: ['React', 'TypeScript'],
         githubURL: 'https://github.com/bryanmaraujo544/weather-app',
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
@@ -119,7 +119,7 @@ const textContent: Projects = {
         uptitle: 'Full-Stack Project',
         title: 'Dev World',
         description:
-          'An app for the users find github profiles and save them if they want.',
+          'An app for the users to find Github profiles and save them if they want.',
         tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
         githubURL: 'https://github.com/bryanmaraujo544/dev-world',
         projectURL: '',
@@ -128,7 +128,7 @@ const textContent: Projects = {
       {
         uptitle: 'Full-Stack Project',
         title: 'Week Planner',
-        description: 'Um app para usuários orgazinar suas tarefas semanais',
+        description: 'An app where the user can organize its weekly tasks.',
         tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT'],
         githubURL: 'https://github.com/bryanmaraujo544/week-planner-frontend',
         projectURL: 'https://week-planner.vercel.app/',
