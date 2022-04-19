@@ -29,7 +29,7 @@ export const useScrollAnimation = ({
                 transition: { type: 'spring', stiffness: 100 },
               },
         );
-      } else {
+      } else if (window.pageYOffset > sectionTop - window.innerHeight / 1.8) {
         controls.start(
           hiddenAnimation
             ? hiddenAnimation

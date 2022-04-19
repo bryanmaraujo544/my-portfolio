@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import { propagationContainerVariants } from 'variants/propagationContainerVariants';
 import { propagationChildVariants } from 'variants/propagationChildVariants';
 import { Container } from './styles';
-import texts from './text-content';
+import data from './text-content';
 import PopSound from '../../../public/pop_drip.mp3';
 import ClickSound from '../../../public/click_04.mp3';
 
@@ -30,14 +30,14 @@ export const Projects = () => {
       as={motion.section}
       animate={controls}
     >
-      <SectionTitle>{texts[language].title}</SectionTitle>
+      <SectionTitle>{data[language].title}</SectionTitle>
       <motion.div
         className="projects-container"
         variants={propagationContainerVariants}
         initial="hidden"
         animate="show"
       >
-        {texts[language].projects.map((project, i) => (
+        {data[language].projects.map((project, i) => (
           <Project
             key={i}
             projectInfos={project}
@@ -53,7 +53,7 @@ export const Projects = () => {
         onClick={() => playClick()}
       >
         <Link href="https://github.com/bryanmaraujo544?tab=repositories">
-          {texts[language].seeMoreButton}
+          {data[language].seeMoreButton}
         </Link>
       </button>
     </Container>
