@@ -1,5 +1,5 @@
 import WeekPlannerImg from 'assets/projects-images/week-planner.png';
-import DevWorldImg from 'assets/projects-images/dev-world.png';
+// import DevWorldImg from 'assets/projects-images/dev-world.png';
 import PomodoroImg from 'assets/projects-images/pomodoro.png';
 import WeatherImg from 'assets/projects-images/weather.png';
 import CalendarImg from 'assets/projects-images/calendar.png';
@@ -60,16 +60,16 @@ const textContent: Projects = {
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
         imageSrc: WeatherImg,
       },
-      {
-        uptitle: 'Projeto Full-Stack',
-        title: 'Dev World',
-        description:
-          'Uma aplicação para usuários encontrarem informações sobre desenvolvedores no Github.',
-        tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
-        githubURL: 'https://github.com/bryanmaraujo544/dev-world',
-        projectURL: '',
-        imageSrc: DevWorldImg,
-      },
+      // {
+      //   uptitle: 'Projeto Full-Stack',
+      //   title: 'Dev World',
+      //   description:
+      //     'Uma aplicação para usuários encontrarem informações sobre desenvolvedores no Github.',
+      //   tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
+      //   githubURL: 'https://github.com/bryanmaraujo544/dev-world',
+      //   projectURL: '',
+      //   imageSrc: DevWorldImg,
+      // },
       {
         uptitle: 'Projeto Full-Stack',
         title: 'Week Planner',
@@ -115,16 +115,16 @@ const textContent: Projects = {
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
         imageSrc: WeatherImg,
       },
-      {
-        uptitle: 'Full-Stack Project',
-        title: 'Dev World',
-        description:
-          'An app for the users to find Github profiles and save them if they want.',
-        tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
-        githubURL: 'https://github.com/bryanmaraujo544/dev-world',
-        projectURL: '',
-        imageSrc: DevWorldImg,
-      },
+      // {
+      //   uptitle: 'Full-Stack Project',
+      //   title: 'Dev World',
+      //   description:
+      //     'An app for the users to find Github profiles and save them if they want.',
+      //   tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
+      //   githubURL: 'https://github.com/bryanmaraujo544/dev-world',
+      //   projectURL: '',
+      //   imageSrc: DevWorldImg,
+      // },
       {
         uptitle: 'Full-Stack Project',
         title: 'Week Planner',

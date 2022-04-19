@@ -21,7 +21,8 @@ export const Container = styled.div<Props>`
   .image-container {
     position: relative;
     width: 100%;
-    height: 37.5rem;
+    /* height: 30rem; */
+    height: calc(100% + 3.2rem);
     grid-column: ${({ isLeft }) => (isLeft ? '2 / 3' : '1 / 2')};
     grid-row: 1 / 2;
     background: #003459;
