@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import Link from 'next/link';
+import { v4 as uuid } from 'uuid';
 
 import { FiGithub } from 'react-icons/fi';
 import { IoOpenOutline } from 'react-icons/io5';
@@ -88,7 +89,7 @@ export const Project = ({ isLeft, projectInfos, variants, animate }: Props) => {
         </DescContainer>
         <Tags>
           {projectInfos.tags.map((tag) => (
-            <p key={tag} className="tag">
+            <p key={uuid()} className="tag">
               {tag}
             </p>
           ))}

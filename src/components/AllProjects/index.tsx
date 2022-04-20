@@ -1,7 +1,11 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable function-paren-newline */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable comma-dangle */
 /* eslint-disable operator-linebreak */
 /* eslint-disable no-use-before-define */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Header } from 'components/Header';
 import { motion } from 'framer-motion';
 
@@ -13,13 +17,35 @@ import { Container, Projects } from './styles';
 import data from './text-content';
 import { SubHeader } from './SubHeader';
 
-export const AllProjects = () => {
-  const [whichBtnIsActive, setWhichBtnIsActive] = useState('');
+interface ProjectI {
+  uptitle: string;
+  title: string;
+  description: string;
+  tags: string[];
+  githubURL: string;
+  projectURL: string;
+  imageSrc: any;
+  date?: any;
+  complexity?: 1 | 2 | 3;
+}
 
+export const AllProjects = () => {
   const { language } = useContext(SettingsContext);
 
+  const [whichBtnIsActive, setWhichBtnIsActive] = useState('');
+
+  // prettier-ignore
+  const [projects, setProjects] = useState(data[language].projects as ProjectI[]);
   const [order, setOrder] = useState(data[language].orderOptions[0]);
   const [filters, setFilters] = useState([] as string[]);
+
+  useEffect(() => {
+    setProjects(data[language].projects);
+  }, [language]);
+
+  const filteredProjects = projects.filter(({ tags }) =>
+    filters.every((filter) => tags.includes(filter))
+  );
 
   return (
     <Container
@@ -43,8 +69,13 @@ export const AllProjects = () => {
         // initial="hidden"
         // animate="show"
       >
-        {data[language].projects.map((project, i) => (
-          <Project projectInfos={project} isLeft={i % 2 === 1} variants={{}} />
+        {filteredProjects.map((project, i) => (
+          <Project
+            projectInfos={project}
+            isLeft={i % 2 === 1}
+            variants={{}}
+            key={i}
+          />
         ))}
       </Projects>
     </Container>

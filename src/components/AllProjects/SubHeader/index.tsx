@@ -40,9 +40,12 @@ export const SubHeader = ({
   const orderRef = useClickOutside(() => closeOrder());
 
   useEffect(() => {
+    // When the languages changes, I'm setting the value of the order text to the current language.
     const indexOfOrder =
       data[language === 'pt' ? 'en' : 'pt'].orderOptions.indexOf(order);
-    setOrder(data[language].orderOptions[indexOfOrder]);
+    setOrder(
+      data[language].orderOptions[indexOfOrder === -1 ? 0 : indexOfOrder]
+    );
   }, [language]);
 
   function handleSelectOrder(text: string) {

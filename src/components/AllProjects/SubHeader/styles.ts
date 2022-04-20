@@ -84,6 +84,7 @@ export const OrderingContainer = styled.div`
     margin-top: 0.8rem;
     padding: 0.8rem 0.4rem;
     border-radius: 0.2rem;
+    box-shadow: 0 0.2rem 0.8rem #00000030;
 
     p {
       cursor: pointer;
@@ -104,10 +105,11 @@ export const FilteringContainer = styled.div`
   .filter-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.8rem;
     padding: 0.8rem;
     height: 100%;
-
+    width: 100%;
     font-weight: 600;
     background: #003459;
     color: #e9ecef;
@@ -131,6 +133,9 @@ export const FilteringContainer = styled.div`
     margin-top: 0.8rem;
     padding: 0.8rem 0.4rem;
     border-radius: 0.2rem;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.8rem #00000030;
   }
 `;
 

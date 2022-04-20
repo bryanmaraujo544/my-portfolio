@@ -58,7 +58,9 @@ export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
     <Container as={motion.div} variants={propagationChildVariants}>
       <div className="logo">
         <Link href="/">
-          <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+          <a>
+            <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+          </a>
         </Link>
       </div>
       <MainContainer as={motion.div}>

@@ -41,7 +41,14 @@ const textContent: Projects = {
     inputPlaceholder: 'Encontre um projeto...',
     orderButton: 'Ordenar por',
     filterButton: 'Filtros',
-    filters: ['Node.js', 'Next.js', 'React'],
+    filters: [
+      'React',
+      'Next.js',
+      'Node.js',
+      'TypeScript',
+      'Prisma',
+      'Full-Stack',
+    ],
     orderOptions: ['Recentes', 'Antigos', 'Complexidade'],
     projects: [
       {
@@ -171,7 +178,14 @@ const textContent: Projects = {
     inputPlaceholder: 'Find a project...',
     orderButton: 'Order by',
     filterButton: 'Filters',
-    filters: ['Node.js', 'Next.js', 'React'],
+    filters: [
+      'React',
+      'Next.js',
+      'Node.js',
+      'TypeScript',
+      'Prisma',
+      'Full-Stack',
+    ],
     orderOptions: ['Recents', 'Oldest', 'Complexity'],
     projects: [
       {
