@@ -41,19 +41,20 @@ export const SearchContainer = styled.form`
     background: #003459;
     align-items: center;
     height: 100%;
-    padding: 1.6rem;
+    padding: 0 1.6rem;
     border-radius: 0.2rem;
 
     .search-icon {
       color: #e9ecef;
       font-size: 2rem;
     }
+
     input {
       width: 100%;
       background: none;
       border: 0;
       height: 100%;
-      padding: 0 1.2rem;
+      padding: 1.6rem 1.2rem;
       font-weight: 600;
       color: #e9ecef;
 

@@ -148,6 +148,7 @@ export const ConfigContainer = styled.div`
     background: #003459;
     border-radius: 0.2rem;
     z-index: 40;
+    box-shadow: 0 0.2rem 0.8rem #00000050;
 
     .sound-btn {
       position: relative;

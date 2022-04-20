@@ -1,6 +1,7 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable no-use-before-define */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Header } from 'components/Header';
 import { motion } from 'framer-motion';
 import { BsSearch, BsFilter } from 'react-icons/bs';
@@ -29,6 +30,12 @@ export const AllProjects = () => {
 
   const filterRef = useClickOutside(() => closeFilter());
   const orderRef = useClickOutside(() => closeOrder());
+
+  useEffect(() => {
+    const indexOfOrder =
+      data[language === 'pt' ? 'en' : 'pt'].orderOptions.indexOf(order);
+    setOrder(data[language].orderOptions[indexOfOrder]);
+  }, [language]);
 
   function handleToggleFilterBtn() {
     if (whichBtnIsActive === 'filter') {
