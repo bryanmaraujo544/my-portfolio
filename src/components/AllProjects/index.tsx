@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useContext, useState } from 'react';
 import { Header } from 'components/Header';
@@ -7,6 +8,7 @@ import { BiDownArrow } from 'react-icons/bi';
 
 import { propagationContainerVariants } from 'variants/propagationContainerVariants';
 import { SettingsContext } from 'contexts/SettingsContext';
+import { useClickOutside } from 'hooks/useClickOutside';
 import {
   Container,
   SubHeader,
@@ -24,6 +26,9 @@ export const AllProjects = () => {
   const { language } = useContext(SettingsContext);
   const [order, setOrder] = useState(data[language].orderOptions[0]);
   const [filters, setFilters] = useState([] as string[]);
+
+  const filterRef = useClickOutside(() => closeFilter());
+  const orderRef = useClickOutside(() => closeOrder());
 
   function handleToggleFilterBtn() {
     if (whichBtnIsActive === 'filter') {
@@ -53,6 +58,19 @@ export const AllProjects = () => {
       setFilters((prev) => [...prev, text]);
     }
   }
+
+  function closeFilter() {
+    if (whichBtnIsActive === 'filter') {
+      setWhichBtnIsActive('');
+    }
+  }
+
+  function closeOrder() {
+    if (whichBtnIsActive === 'order') {
+      setWhichBtnIsActive('');
+    }
+  }
+
   return (
     <Container
       as={motion.div}
@@ -73,7 +91,7 @@ export const AllProjects = () => {
               />
             </div>
           </SearchContainer>
-          <FilteringContainer>
+          <FilteringContainer ref={filterRef}>
             <button
               className="filter-btn"
               type="button"
@@ -96,7 +114,7 @@ export const AllProjects = () => {
               </div>
             )}
           </FilteringContainer>
-          <OrderingContainer>
+          <OrderingContainer ref={orderRef}>
             <button
               className="order-btn"
               type="button"
