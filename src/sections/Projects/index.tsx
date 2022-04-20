@@ -52,9 +52,7 @@ export const Projects = () => {
         onMouseEnter={() => playPop()}
         onClick={() => playClick()}
       >
-        <Link href="https://github.com/bryanmaraujo544?tab=repositories">
-          {data[language].seeMoreButton}
-        </Link>
+        <Link href="/projects">{data[language].seeMoreButton}</Link>
       </button>
     </Container>
   );

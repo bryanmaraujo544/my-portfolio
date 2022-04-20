@@ -12,6 +12,7 @@ export const Container = styled.header`
     height: 4.8rem;
     position: relative;
     width: 4.8rem;
+    cursor: pointer;
 
     @media (max-width: 468px) {
       height: 3.6rem;

@@ -28,7 +28,8 @@ import EnImg from '../../assets/english.jpg';
 import PopSound from '../../../public/pop_drip.mp3';
 import ClickSound from '../../../public/click_04.mp3';
 
-export const Header = () => {
+// eslint-disable-next-line react/require-default-props
+export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
@@ -52,26 +53,30 @@ export const Header = () => {
   return (
     <Container as={motion.div} variants={propagationChildVariants}>
       <div className="logo">
-        <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+        <Link href="/">
+          <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+        </Link>
       </div>
       <MainContainer as={motion.div}>
-        <ul>
-          {texts[language].listSections.map(({ title, targetSection }) => (
-            <LinkScroll
-              to={targetSection}
-              smooth
-              offset={-72}
-              onClick={() => playClick()}
-              key={title}
-              spy
-              href={targetSection}
-            >
-              <li className="list-item" onClick={() => playClick()}>
-                {title}
-              </li>
-            </LinkScroll>
-          ))}
-        </ul>
+        {!isProjectsPage && (
+          <ul>
+            {texts[language].listSections.map(({ title, targetSection }) => (
+              <LinkScroll
+                to={targetSection}
+                smooth
+                offset={-72}
+                onClick={() => playClick()}
+                key={title}
+                spy
+                href={targetSection}
+              >
+                <li className="list-item" onClick={() => playClick()}>
+                  {title}
+                </li>
+              </LinkScroll>
+            ))}
+          </ul>
+        )}
         <RightButtons>
           <Link href="https://www.canva.com/design/DAEaQvDNjfk/4CswO--WGflk6CzEmhEFUQ/view?utm_content=DAEaQvDNjfk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
             <a target="_blank">
