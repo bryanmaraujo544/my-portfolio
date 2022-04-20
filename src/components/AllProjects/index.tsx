@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { propagationContainerVariants } from 'variants/propagationContainerVariants';
 import { SettingsContext } from 'contexts/SettingsContext';
 import { Project } from 'components/Project';
-import { propagationChildVariants } from 'variants/propagationChildVariants';
+// import { propagationChildVariants } from 'variants/propagationChildVariants';
 import { Container, Projects } from './styles';
 import data from './text-content';
 import { SubHeader } from './SubHeader';
@@ -37,13 +37,14 @@ export const AllProjects = () => {
         setWhichBtnIsActive={setWhichBtnIsActive}
         whichBtnIsActive={whichBtnIsActive}
       />
-      <Projects>
+      <Projects
+        as={motion.section}
+        // variants={propagationContainerVariants}
+        // initial="hidden"
+        // animate="show"
+      >
         {data[language].projects.map((project, i) => (
-          <Project
-            projectInfos={project}
-            isLeft={i % 2 === 1}
-            variants={propagationChildVariants}
-          />
+          <Project projectInfos={project} isLeft={i % 2 === 1} variants={{}} />
         ))}
       </Projects>
     </Container>

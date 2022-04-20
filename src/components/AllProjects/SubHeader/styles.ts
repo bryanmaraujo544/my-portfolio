@@ -9,12 +9,12 @@ export const Container = styled.header`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3.2rem;
+  margin-top: 6.4rem;
   height: 4.8rem;
   z-index: 999;
 
   .title {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
   }
 `;
 

@@ -43,6 +43,7 @@ export const Projects = () => {
             projectInfos={project}
             isLeft={i % 2 === 1}
             variants={propagationChildVariants}
+            animate
           />
         ))}
       </motion.div>

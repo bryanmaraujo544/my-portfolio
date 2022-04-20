@@ -9,8 +9,8 @@ export const Container = styled.div`
   }
 `;
 
-export const Projects = styled.div`
-  margin-top: 9.6rem;
+export const Projects = styled.section`
+  margin-top: calc(9.6rem);
   display: flex;
   flex-direction: column;
   gap: 9.6rem;

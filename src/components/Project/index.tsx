@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,11 +33,14 @@ interface Props {
   isLeft: boolean;
   projectInfos: ProjectProps;
   variants: any;
+  animate?: boolean;
 }
 
-export const Project = ({ isLeft, projectInfos, variants }: Props) => {
+export const Project = ({ isLeft, projectInfos, variants, animate }: Props) => {
   const [playClick] = useSound(ClickSound);
-  const { sectionRef, controls } = useScrollAnimation({
+
+  // prettier-ignore
+  const { sectionRef, controls } = useScrollAnimation(animate ? {
     showAnimation: {
       x: 0,
       opacity: 1,
@@ -54,7 +58,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
         stiffness: 40,
       },
     },
-  });
+  } : {});
 
   return (
     <Container
@@ -62,7 +66,7 @@ export const Project = ({ isLeft, projectInfos, variants }: Props) => {
       as={motion.div}
       ref={sectionRef}
       variants={variants}
-      initial={{ x: isLeft ? 100 : -100 }}
+      initial={animate ? { x: isLeft ? 100 : -100 } : {}}
       animate={controls}
     >
       <div className="image-container">
