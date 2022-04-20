@@ -42,7 +42,7 @@ export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
   const [playPop] = useSound(PopSound);
   const [playClick] = useSound(ClickSound);
 
-  const settingsRef = useClickOutside(() => handleToggleSettings());
+  const settingsRef = useClickOutside(() => setIsSettingsOpen(false));
 
   function handleToggleMenu() {
     playPop();

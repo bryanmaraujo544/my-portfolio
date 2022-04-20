@@ -147,7 +147,7 @@ export const ConfigContainer = styled.div`
     padding: 1.2rem 0.4rem;
     background: #003459;
     border-radius: 0.2rem;
-    z-index: 40;
+    z-index: 999999;
     box-shadow: 0 0.2rem 0.8rem #00000050;
 
     .sound-btn {

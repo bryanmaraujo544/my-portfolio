@@ -1,8 +1,9 @@
 import WeekPlannerImg from 'assets/projects-images/week-planner.png';
-// import DevWorldImg from 'assets/projects-images/dev-world.png';
+import DevWorldImg from 'assets/projects-images/dev-world.png';
 import PomodoroImg from 'assets/projects-images/pomodoro.png';
 import WeatherImg from 'assets/projects-images/weather.png';
 import CalendarImg from 'assets/projects-images/calendar.png';
+import KanbanImg from 'assets/projects-images/kanban.png';
 
 interface Project {
   uptitle: string;
@@ -49,6 +50,23 @@ const textContent: Projects = {
         imageSrc: CalendarImg,
       },
       {
+        uptitle: 'Projeto Full-Stack',
+        title: 'Kanban App',
+        description:
+          'Um quadro de tarefas onde os usuários conseguem adicionar tarefas, arrastá-las entre colunas e acessar quadros de outros usuários',
+        tags: [
+          'React',
+          'Node.js',
+          'TypeScript',
+          'JWT',
+          'Prisma',
+          "Drag'n Drop",
+        ],
+        githubURL: 'https://github.com/bryanmaraujo544/kanban-app',
+        projectURL: 'https://kanban-app-cyan.vercel.app/',
+        imageSrc: KanbanImg,
+      },
+      {
         uptitle: 'Projeto Front-End',
         title: 'Pomodoro App',
         description:
@@ -68,16 +86,16 @@ const textContent: Projects = {
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
         imageSrc: WeatherImg,
       },
-      // {
-      //   uptitle: 'Projeto Full-Stack',
-      //   title: 'Dev World',
-      //   description:
-      //     'Uma aplicação para usuários encontrarem informações sobre desenvolvedores no Github.',
-      //   tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
-      //   githubURL: 'https://github.com/bryanmaraujo544/dev-world',
-      //   projectURL: '',
-      //   imageSrc: DevWorldImg,
-      // },
+      {
+        uptitle: 'Projeto Full-Stack',
+        title: 'Dev World',
+        description:
+          'Uma aplicação para usuários encontrarem informações sobre desenvolvedores no Github.',
+        tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
+        githubURL: 'https://github.com/bryanmaraujo544/dev-world',
+        projectURL: '',
+        imageSrc: DevWorldImg,
+      },
       {
         uptitle: 'Projeto Full-Stack',
         title: 'Week Planner',
@@ -108,6 +126,23 @@ const textContent: Projects = {
         imageSrc: CalendarImg,
       },
       {
+        uptitle: 'Projeto Full-Stack',
+        title: 'Kanban App',
+        description:
+          'Um quadro de tarefas onde os usuários conseguem adicionar tarefas, arrastá-las entre colunas e acessar quadros de outros usuários',
+        tags: [
+          'React',
+          'Node.js',
+          'TypeScript',
+          'JWT',
+          'Prisma',
+          "Drag'n Drop",
+        ],
+        githubURL: 'https://github.com/bryanmaraujo544/kanban-app',
+        projectURL: 'https://kanban-app-cyan.vercel.app/',
+        imageSrc: KanbanImg,
+      },
+      {
         uptitle: 'Front-End Project',
         title: 'Pomodoro App',
         description:
@@ -127,16 +162,16 @@ const textContent: Projects = {
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
         imageSrc: WeatherImg,
       },
-      // {
-      //   uptitle: 'Full-Stack Project',
-      //   title: 'Dev World',
-      //   description:
-      //     'An app for the users to find Github profiles and save them if they want.',
-      //   tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
-      //   githubURL: 'https://github.com/bryanmaraujo544/dev-world',
-      //   projectURL: '',
-      //   imageSrc: DevWorldImg,
-      // },
+      {
+        uptitle: 'Full-Stack Project',
+        title: 'Dev World',
+        description:
+          'An app for the users to find Github profiles and save them if they want.',
+        tags: ['React', 'Next.js', 'Node.js', 'MySQL', 'JWT', 'TypeScript'],
+        githubURL: 'https://github.com/bryanmaraujo544/dev-world',
+        projectURL: '',
+        imageSrc: DevWorldImg,
+      },
       {
         uptitle: 'Full-Stack Project',
         title: 'Week Planner',
