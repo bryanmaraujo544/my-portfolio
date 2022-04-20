@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useContext, useState } from 'react';
@@ -14,6 +15,7 @@ import logo from 'assets/logo.png';
 import { MobileMenu } from 'components/MobileMenu';
 import { SettingsContext } from 'contexts/SettingsContext';
 import { propagationChildVariants } from 'variants/propagationChildVariants';
+import { useClickOutside } from 'hooks/useClickOutside';
 import {
   Container,
   MainContainer,
@@ -39,6 +41,8 @@ export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
 
   const [playPop] = useSound(PopSound);
   const [playClick] = useSound(ClickSound);
+
+  const settingsRef = useClickOutside(() => handleToggleSettings());
 
   function handleToggleMenu() {
     playPop();
@@ -90,7 +94,7 @@ export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
               </button>
             </a>
           </Link>
-          <ConfigContainer>
+          <ConfigContainer ref={settingsRef}>
             <button
               type="button"
               className="settings-icon-container"
