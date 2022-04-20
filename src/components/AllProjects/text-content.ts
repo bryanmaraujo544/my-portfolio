@@ -5,6 +5,8 @@ import WeatherImg from 'assets/projects-images/weather.png';
 import CalendarImg from 'assets/projects-images/calendar.png';
 import KanbanImg from 'assets/projects-images/kanban.png';
 import QuizImg from 'assets/projects-images/quiz.png';
+import ImCodeImg from 'assets/projects-images/imcode-landing.png';
+import RestaurantImg from 'assets/projects-images/restaurant-app.png';
 
 interface Project {
   uptitle: string;
@@ -14,6 +16,8 @@ interface Project {
   githubURL: string;
   projectURL: string;
   imageSrc: any;
+  date?: any;
+  complexity?: 1 | 2 | 3;
 }
 
 interface Data {
@@ -56,6 +60,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/quiz-game',
         projectURL: 'https://simple-quiz-iota.vercel.app/',
         imageSrc: QuizImg,
+        complexity: 3,
+        date: new Date('04-20-2022'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -73,6 +79,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/kanban-app',
         projectURL: 'https://kanban-app-cyan.vercel.app/',
         imageSrc: KanbanImg,
+        complexity: 3,
+        date: new Date('04-03-2022'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -83,6 +91,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
         projectURL: 'https://calendar-app-delta.vercel.app/login',
         imageSrc: CalendarImg,
+        complexity: 3,
+        date: new Date('02-04-2022'),
       },
       {
         uptitle: 'Projeto Front-End',
@@ -93,6 +103,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/pomodoro-app',
         projectURL: 'https://pomodoro-app-silk.vercel.app/',
         imageSrc: PomodoroImg,
+        complexity: 2,
+        date: new Date('01-22-2022'),
       },
       {
         uptitle: 'Projeto Front-End',
@@ -103,6 +115,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/weather-app',
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
         imageSrc: WeatherImg,
+        complexity: 2,
+        date: new Date('01-28-2022'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -113,6 +127,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/dev-world',
         projectURL: '',
         imageSrc: DevWorldImg,
+        complexity: 2,
+        date: new Date('12-13-2021'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -122,6 +138,31 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/week-planner-frontend',
         projectURL: 'https://week-planner.vercel.app/',
         imageSrc: WeekPlannerImg,
+        complexity: 2,
+        date: new Date('12-09-2021'),
+      },
+      {
+        uptitle: 'Projeto Front-End',
+        title: 'Restaurant App',
+        description:
+          'Uma aplicação contendo diversas informações sobre um restaurante e uma página para cada ponto do mesmo.',
+        tags: ['React', 'Next.js', 'Landing', 'Styled-Components'],
+        githubURL: 'https://github.com/bryanmaraujo544/restaurant-app',
+        projectURL: 'https://restaurant-app-pi.vercel.app/',
+        imageSrc: RestaurantImg,
+        complexity: 2,
+        date: new Date('07-20-2021'),
+      },
+      {
+        uptitle: 'Landing Page',
+        title: 'ImCode Landing',
+        description: 'Uma landing page baseada em um design pronto',
+        tags: ['React', 'Landing', 'Styled-Components'],
+        githubURL: 'https://github.com/bryanmaraujo544/imcode-test',
+        projectURL: 'https://imcode-test.vercel.app/',
+        imageSrc: ImCodeImg,
+        complexity: 1,
+        date: new Date('02-31-2022'),
       },
     ],
   },
@@ -149,6 +190,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/quiz-game',
         projectURL: 'https://simple-quiz-iota.vercel.app/',
         imageSrc: QuizImg,
+        complexity: 3,
+        date: new Date('04-20-2022'),
       },
       {
         uptitle: 'Full-Stack Project',
@@ -166,6 +209,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/kanban-app',
         projectURL: 'https://kanban-app-cyan.vercel.app/',
         imageSrc: KanbanImg,
+        complexity: 3,
+        date: new Date('04-03-2022'),
       },
       {
         uptitle: 'Full-Stack Project',
@@ -176,6 +221,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
         projectURL: 'https://calendar-app-delta.vercel.app/login',
         imageSrc: CalendarImg,
+        complexity: 3,
+        date: new Date('02-04-2022'),
       },
       {
         uptitle: 'Front-End Project',
@@ -186,6 +233,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/week-planner-frontend',
         projectURL: 'http://week-planner.vercel.app/',
         imageSrc: PomodoroImg,
+        complexity: 2,
+        date: new Date('01-22-2022'),
       },
       {
         uptitle: 'Front-End Project',
@@ -196,6 +245,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/weather-app',
         projectURL: 'https://weather-app-plum-nine.vercel.app/',
         imageSrc: WeatherImg,
+        complexity: 2,
+        date: new Date('01-28-2022'),
       },
       {
         uptitle: 'Full-Stack Project',
@@ -206,6 +257,8 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/dev-world',
         projectURL: '',
         imageSrc: DevWorldImg,
+        complexity: 2,
+        date: new Date('12-13-2021'),
       },
       {
         uptitle: 'Full-Stack Project',
@@ -215,6 +268,31 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/week-planner-frontend',
         projectURL: 'https://week-planner.vercel.app/',
         imageSrc: WeekPlannerImg,
+        complexity: 2,
+        date: new Date('12-09-2021'),
+      },
+      {
+        uptitle: 'Front-End Project',
+        title: 'Restaurant App',
+        description:
+          'An application where there are informations about one restaurant.',
+        tags: ['React', 'Next.js', 'Landing', 'Styled-Components'],
+        githubURL: 'https://github.com/bryanmaraujo544/restaurant-app',
+        projectURL: 'https://restaurant-app-pi.vercel.app/',
+        imageSrc: RestaurantImg,
+        complexity: 2,
+        date: new Date('07-20-2021'),
+      },
+      {
+        uptitle: 'Landing Page',
+        title: 'ImCode Landing',
+        description: 'One landing page based on a internet design',
+        tags: ['React', 'Landing', 'Styled-Components'],
+        githubURL: 'https://github.com/bryanmaraujo544/imcode-test',
+        projectURL: 'https://imcode-test.vercel.app/',
+        imageSrc: ImCodeImg,
+        complexity: 1,
+        date: new Date('02-31-2022'),
       },
     ],
   },

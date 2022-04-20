@@ -83,7 +83,7 @@ export const Project = ({ isLeft, projectInfos, variants, animate }: Props) => {
       <div className="infos-container">
         <Uptitle>{projectInfos.uptitle}</Uptitle>
         <Title>{projectInfos.title}</Title>
-        <DescContainer>
+        <DescContainer isLeft={isLeft}>
           <p className="description">{projectInfos.description}</p>
         </DescContainer>
         <Tags>

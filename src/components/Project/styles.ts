@@ -78,9 +78,9 @@ export const Title = styled.h4`
   line-height: 1.25;
 `;
 
-export const DescContainer = styled.div`
+export const DescContainer = styled.div<Props>`
   display: flex;
-  justify-content: center;
+  justify-content: ${({ isLeft }) => (isLeft ? 'flex-start' : 'flex-end')};
   align-items: center;
   padding: 2.4rem;
   min-height: 8rem;
