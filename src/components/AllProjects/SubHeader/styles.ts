@@ -21,7 +21,7 @@ export const Container = styled.header`
   }
 
   @media (max-width: 468px) {
-    height: auto;
+    height: 100%;
   }
 
   .title {
@@ -38,6 +38,7 @@ export const RightActions = styled.div`
   @media (max-width: 468px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 1.2rem;
     width: 100%;
     height: auto;
@@ -50,6 +51,7 @@ export const SearchContainer = styled.form`
 
   @media (max-width: 468px) {
     grid-column: 1 / 3;
+    grid-row: 1 / 2;
     height: 4.8rem;
   }
 
@@ -88,6 +90,7 @@ export const OrderingContainer = styled.div`
 
   @media (max-width: 468px) {
     grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   .order-btn {
@@ -141,6 +144,7 @@ export const FilteringContainer = styled.div`
 
   @media (max-width: 468px) {
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 
   .filter-btn {
