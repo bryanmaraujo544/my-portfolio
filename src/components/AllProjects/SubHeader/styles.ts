@@ -50,6 +50,7 @@ export const SearchContainer = styled.form`
 
   @media (max-width: 468px) {
     grid-column: 1 / 3;
+    height: 4.8rem;
   }
 
   .input-container {
