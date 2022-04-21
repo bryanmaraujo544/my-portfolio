@@ -76,7 +76,6 @@ const textContent: Projects = {
         description:
           'Um quadro de tarefas onde os usuários conseguem adicionar tarefas, arrastá-las entre colunas e acessar quadros de outros usuários',
         tags: [
-          'React',
           'Node.js',
           'TypeScript',
           'JWT',
@@ -222,7 +221,6 @@ const textContent: Projects = {
         description:
           'Each user has its own task board with fully editable columns and tasks. And the users can invite and get invited to board of other users',
         tags: [
-          'React',
           'Node.js',
           'TypeScript',
           'JWT',

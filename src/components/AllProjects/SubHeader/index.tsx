@@ -7,6 +7,7 @@ import { BiDownArrow } from 'react-icons/bi';
 
 import { SettingsContext } from 'contexts/SettingsContext';
 import { useClickOutside } from 'hooks/useClickOutside';
+import { useSound } from 'hooks/useSound';
 import data from '../text-content';
 import {
   Container,
@@ -16,6 +17,9 @@ import {
   FilteringContainer,
   FilterOption,
 } from './styles';
+
+import PopSound from '../../../../public/pop_drip.mp3';
+import ClickSound from '../../../../public/click_04.mp3';
 
 interface Props {
   setOrder: any;
@@ -43,6 +47,9 @@ export const SubHeader = ({
   const filterRef = useClickOutside(() => closeFilter());
   const orderRef = useClickOutside(() => closeOrder());
 
+  const [playPop] = useSound(PopSound);
+  const [playClick] = useSound(ClickSound);
+
   useEffect(() => {
     // When the languages changes, I'm setting the value of the order text to the current language.
     const indexOfOrder =
@@ -53,11 +60,13 @@ export const SubHeader = ({
   }, [language]);
 
   function handleSelectOrder(text: string) {
+    playPop();
     setOrder(text);
     setWhichBtnIsActive('');
   }
 
   function handleToggleFilter(text: string) {
+    playPop();
     if (filters.some((t: string) => t === text)) {
       setFilters((prev: any) => prev.filter((filter: any) => filter !== text));
     } else {
@@ -66,6 +75,7 @@ export const SubHeader = ({
   }
 
   function handleToggleFilterBtn() {
+    playPop();
     if (whichBtnIsActive === 'filter') {
       setWhichBtnIsActive('');
     } else {
@@ -74,6 +84,8 @@ export const SubHeader = ({
   }
 
   function handleToggleOrderBtn() {
+    playPop();
+
     if (whichBtnIsActive === 'order') {
       setWhichBtnIsActive('');
     } else {
@@ -105,6 +117,7 @@ export const SubHeader = ({
               placeholder={data[language].inputPlaceholder}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onClick={() => playClick()}
             />
           </div>
         </SearchContainer>
@@ -122,6 +135,7 @@ export const SubHeader = ({
             <div className="filtering-container">
               {data[language].filters.map((text: string) => (
                 <FilterOption
+                  onMouseEnter={() => playClick()}
                   isSelected={filters.some((t) => t === text)}
                   onClick={() => handleToggleFilter(text)}
                 >
@@ -143,7 +157,12 @@ export const SubHeader = ({
           {whichBtnIsActive === 'order' && (
             <div className="ordering-container">
               {data[language].orderOptions.map((text: string) => (
-                <p onClick={() => handleSelectOrder(text)}>{text}</p>
+                <p
+                  onClick={() => handleSelectOrder(text)}
+                  onMouseEnter={() => playClick()}
+                >
+                  {text}
+                </p>
               ))}
             </div>
           )}

@@ -19,6 +19,7 @@ import {
 } from './styles';
 
 import ClickSound from '../../../public/click_04.mp3';
+import PopSound from '../../../public/pop_drip.mp3';
 
 interface ProjectProps {
   uptitle: string;
@@ -39,6 +40,7 @@ interface Props {
 
 export const Project = ({ isLeft, projectInfos, variants, animate }: Props) => {
   const [playClick] = useSound(ClickSound);
+  const [playPop] = useSound(PopSound);
 
   // prettier-ignore
   const { sectionRef, controls } = useScrollAnimation(animate ? {
@@ -70,7 +72,7 @@ export const Project = ({ isLeft, projectInfos, variants, animate }: Props) => {
       initial={animate ? { x: isLeft ? 100 : -100 } : {}}
       animate={controls}
     >
-      <div className="image-container">
+      <div className="image-container" onMouseEnter={() => playPop()}>
         <Link href={projectInfos.projectURL || projectInfos.githubURL}>
           <a target="_blank">
             <Image
@@ -96,13 +98,21 @@ export const Project = ({ isLeft, projectInfos, variants, animate }: Props) => {
         </Tags>
         <Buttons>
           <Link href={projectInfos.githubURL}>
-            <a target="_blank" onClick={() => playClick()}>
+            <a
+              target="_blank"
+              onClick={() => playPop()}
+              onMouseEnter={() => playClick()}
+            >
               <FiGithub className="icon" />
             </a>
           </Link>
           {projectInfos.projectURL && (
             <Link href={projectInfos.projectURL}>
-              <a target="_blank" onClick={() => playClick()}>
+              <a
+                target="_blank"
+                onClick={() => playPop()}
+                onMouseEnter={() => playClick()}
+              >
                 <IoOpenOutline className="icon" />
               </a>
             </Link>
