@@ -36,12 +36,14 @@ export const RightActions = styled.div`
   height: 100%;
 
   @media (max-width: 468px) {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.2rem;
     width: 100%;
-    height: auto;
+    height: auto; */
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 `;
 
@@ -50,8 +52,9 @@ export const SearchContainer = styled.form`
   z-index: 9999;
 
   @media (max-width: 468px) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+    /* grid-column: 1 / 3;
+    grid-row: 1 / 2; */
+    width: 100%;
     height: 4.8rem;
   }
 
@@ -89,8 +92,9 @@ export const OrderingContainer = styled.div`
   z-index: 9999;
 
   @media (max-width: 468px) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    /* grid-column: 2 / 3;
+    grid-row: 2 / 3; */
+    flex: 1;
   }
 
   .order-btn {
@@ -143,8 +147,9 @@ export const FilteringContainer = styled.div`
   z-index: 9999;
 
   @media (max-width: 468px) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 3; */
+    flex: 1;
   }
 
   .filter-btn {
