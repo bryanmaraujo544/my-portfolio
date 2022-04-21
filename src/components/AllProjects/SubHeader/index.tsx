@@ -24,6 +24,8 @@ interface Props {
   filters: string[];
   whichBtnIsActive: string;
   order: string;
+  search: string;
+  setSearch: any;
 }
 
 export const SubHeader = ({
@@ -33,6 +35,8 @@ export const SubHeader = ({
   filters,
   whichBtnIsActive,
   order,
+  search,
+  setSearch,
 }: Props) => {
   const { language } = useContext(SettingsContext);
 
@@ -96,7 +100,12 @@ export const SubHeader = ({
         <SearchContainer>
           <div className="input-container">
             <BsSearch className="search-icon" />
-            <input type="text" placeholder={data[language].inputPlaceholder} />
+            <input
+              type="text"
+              placeholder={data[language].inputPlaceholder}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
         </SearchContainer>
         <FilteringContainer ref={filterRef}>

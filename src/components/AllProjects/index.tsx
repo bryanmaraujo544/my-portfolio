@@ -36,6 +36,7 @@ export const AllProjects = () => {
 
   // prettier-ignore
   const [projects, setProjects] = useState(data[language].projects as ProjectI[]);
+  const [search, setSearch] = useState('');
   const [order, setOrder] = useState(data[language].orderOptions[0]);
   const [filters, setFilters] = useState([] as string[]);
 
@@ -43,7 +44,14 @@ export const AllProjects = () => {
     setProjects(data[language].projects);
   }, [language]);
 
-  const filteredProjects = projects.filter(({ tags }) =>
+  const searchedProjects = projects.filter(
+    ({ title, uptitle, description }) => {
+      const value = title + uptitle + description;
+      return value.includes(search);
+    }
+  );
+
+  const filteredProjects = searchedProjects.filter(({ tags }) =>
     filters.every((filter) => tags.includes(filter))
   );
 
@@ -73,8 +81,6 @@ export const AllProjects = () => {
     }
   });
 
-  console.log({ orderedProjects });
-
   return (
     <Container
       as={motion.div}
@@ -90,6 +96,8 @@ export const AllProjects = () => {
         setOrder={setOrder}
         setWhichBtnIsActive={setWhichBtnIsActive}
         whichBtnIsActive={whichBtnIsActive}
+        search={search}
+        setSearch={setSearch}
       />
       <Projects
         as={motion.section}

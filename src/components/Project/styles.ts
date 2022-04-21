@@ -12,6 +12,7 @@ export const Container = styled.div<Props>`
   grid-template-rows: 1fr;
   align-items: center;
   width: 100%;
+  margin-bottom: 2rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
