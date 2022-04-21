@@ -15,4 +15,11 @@ export const Projects = styled.section`
   flex-direction: column;
   gap: 9.6rem;
   margin-bottom: 9.6rem;
+
+  .not-found {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: -1.6rem;
+    align-self: center;
+  }
 `;

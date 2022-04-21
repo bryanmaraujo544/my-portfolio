@@ -105,14 +105,18 @@ export const AllProjects = () => {
         // initial="hidden"
         // animate="show"
       >
-        {orderedProjects.map((project, i) => (
-          <Project
-            projectInfos={project}
-            isLeft={i % 2 === 1}
-            variants={{}}
-            key={i}
-          />
-        ))}
+        {orderedProjects.length > 0 ? (
+          orderedProjects.map((project, i) => (
+            <Project
+              projectInfos={project}
+              isLeft={i % 2 === 1}
+              variants={{}}
+              key={i}
+            />
+          ))
+        ) : (
+          <p className="not-found">Any project was found :(</p>
+        )}
       </Projects>
     </Container>
   );

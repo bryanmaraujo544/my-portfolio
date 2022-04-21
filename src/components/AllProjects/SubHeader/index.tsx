@@ -97,7 +97,7 @@ export const SubHeader = ({
     <Container>
       <h2 className="title">{data[language].title}</h2>
       <RightActions>
-        <SearchContainer>
+        <SearchContainer onSubmit={(e) => e.preventDefault()}>
           <div className="input-container">
             <BsSearch className="search-icon" />
             <input
