@@ -13,6 +13,17 @@ export const Container = styled.header`
   height: 4.8rem;
   z-index: 999;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 4.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  @media (max-width: 468px) {
+    height: auto;
+  }
+
   .title {
     font-size: 3.2rem;
   }
@@ -23,11 +34,23 @@ export const RightActions = styled.div`
   align-items: center;
   gap: 2.4rem;
   height: 100%;
+
+  @media (max-width: 468px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const SearchContainer = styled.form`
   height: 100%;
   z-index: 9999;
+
+  @media (max-width: 468px) {
+    grid-column: 1 / 3;
+  }
 
   .input-container {
     display: flex;
@@ -62,6 +85,10 @@ export const OrderingContainer = styled.div`
   height: 100%;
   z-index: 9999;
 
+  @media (max-width: 468px) {
+    grid-column: 2 / 3;
+  }
+
   .order-btn {
     display: flex;
     align-items: center;
@@ -73,7 +100,16 @@ export const OrderingContainer = styled.div`
     background: #003459;
     color: #e9ecef;
     height: 100%;
+    width: 100%;
     border-radius: 0.2rem;
+
+    @media (max-width: 468px) {
+      height: 4.8rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 
   .ordering-container {
@@ -102,6 +138,10 @@ export const FilteringContainer = styled.div`
   height: 100%;
   z-index: 9999;
 
+  @media (max-width: 468px) {
+    grid-column: 1 / 2;
+  }
+
   .filter-btn {
     display: flex;
     align-items: center;
@@ -115,6 +155,10 @@ export const FilteringContainer = styled.div`
     color: #e9ecef;
     height: 100%;
     border-radius: 0.2rem;
+
+    @media (max-width: 468px) {
+      height: 4.8rem;
+    }
 
     .circle {
       width: 0.6rem;
