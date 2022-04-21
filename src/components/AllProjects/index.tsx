@@ -25,8 +25,8 @@ interface ProjectI {
   githubURL: string;
   projectURL: string;
   imageSrc: any;
-  date?: any;
-  complexity?: 1 | 2 | 3;
+  date: any;
+  complexity: 1 | 2 | 3;
 }
 
 export const AllProjects = () => {
@@ -46,6 +46,34 @@ export const AllProjects = () => {
   const filteredProjects = projects.filter(({ tags }) =>
     filters.every((filter) => tags.includes(filter))
   );
+
+  const orderedProjects = filteredProjects.sort((a, b) => {
+    switch (order) {
+      case 'Recentes': {
+        return b.date - a.date;
+      }
+      case 'Recents': {
+        return b.date - a.date;
+      }
+      case 'Antigos': {
+        return a.date - b.date;
+      }
+      case 'Oldest': {
+        return a.date - b.date;
+      }
+      case 'Complexidade': {
+        return b.complexity - a.complexity;
+      }
+      case 'Complexity': {
+        return b.complexity - a.complexity;
+      }
+      default:
+        return a.complexity - b.complexity;
+      // console.log('default');
+    }
+  });
+
+  console.log({ orderedProjects });
 
   return (
     <Container
@@ -69,7 +97,7 @@ export const AllProjects = () => {
         // initial="hidden"
         // animate="show"
       >
-        {filteredProjects.map((project, i) => (
+        {orderedProjects.map((project, i) => (
           <Project
             projectInfos={project}
             isLeft={i % 2 === 1}

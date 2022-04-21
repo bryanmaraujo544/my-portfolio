@@ -16,8 +16,8 @@ interface Project {
   githubURL: string;
   projectURL: string;
   imageSrc: any;
-  date?: any;
-  complexity?: 1 | 2 | 3;
+  date: any;
+  complexity: 1 | 2 | 3;
 }
 
 interface Data {
