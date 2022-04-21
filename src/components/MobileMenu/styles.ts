@@ -8,7 +8,7 @@ export const Overlay = styled.div`
   height: 100vh;
   background: #00000050;
   display: none;
-  z-index: 15;
+  z-index: 99999999;
 
   /* @media (max-width: 768px) {
     display: block;
