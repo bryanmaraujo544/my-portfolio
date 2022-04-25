@@ -7,6 +7,12 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     padding: 0 3.2rem;
   }
+
+  .results-text {
+    margin-top: 2.4rem;
+    margin-bottom: -3.2rem;
+    color: #ced4da;
+  }
 `;
 
 export const Projects = styled.section`

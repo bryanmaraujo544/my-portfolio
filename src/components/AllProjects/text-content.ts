@@ -28,6 +28,7 @@ interface Data {
   filterButton: string;
   filters: string[];
   orderOptions: string[];
+  resultsText: string;
 }
 
 interface Projects {
@@ -41,6 +42,7 @@ const textContent: Projects = {
     inputPlaceholder: 'Encontre um projeto...',
     orderButton: 'Ordenar por',
     filterButton: 'Filtros',
+    resultsText: 'Projetos foram encontrados',
     filters: [
       'Next.js',
       'Node.js',
@@ -186,6 +188,7 @@ const textContent: Projects = {
     inputPlaceholder: 'Find a project...',
     orderButton: 'Order by',
     filterButton: 'Filters',
+    resultsText: 'Projects was found',
     filters: [
       'Next.js',
       'Node.js',

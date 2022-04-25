@@ -99,6 +99,11 @@ export const AllProjects = () => {
         search={search}
         setSearch={setSearch}
       />
+      {orderedProjects.length > 0 && (
+        <p className="results-text">
+          {orderedProjects.length} {data[language].resultsText}
+        </p>
+      )}
       <Projects
         as={motion.section}
         // variants={propagationContainerVariants}
