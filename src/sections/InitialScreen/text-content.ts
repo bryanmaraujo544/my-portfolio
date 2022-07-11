@@ -19,7 +19,7 @@ const textContent: Props = {
       name: 'Bryan Martins',
       subtitle: 'Desenvolvedor Front-End',
       description:
-        'Atualmente estou à procura de uma oportunidade de emprego para colocar minhas habilidades em prática e auxiliar a empresa a atingir seus objetivos',
+        'Atualmente atuo como Freelancer, porém estou à procura de oportunidades de trabalho formal.',
     },
   },
   en: {
@@ -28,7 +28,7 @@ const textContent: Props = {
       name: 'Bryan Martins',
       subtitle: 'Front-End Developer',
       description:
-        'Currently, I am looking for a job opportunity to put my skills in practice and contribute to the company achieve its goals',
+        "Currently I'm Freelancer, but I'm looking for opportunities of formal jobs.",
     },
   },
 };

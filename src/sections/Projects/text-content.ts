@@ -1,7 +1,8 @@
 import CalendarImg from 'assets/projects-images/calendar.png';
 import KanbanImg from 'assets/projects-images/kanban.png';
 import QuizImg from 'assets/projects-images/quiz.png';
-import WeatherImg from 'assets/projects-images/weather.png';
+// import WeatherImg from 'assets/projects-images/weather.png';
+import MoneyImg from 'assets/projects-images/dtmoney.png';
 
 interface Project {
   uptitle: string;
@@ -48,6 +49,16 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Projeto Full-Stack',
+        title: 'Calendar App',
+        description:
+          'Um calendário onde é possível definir tarefas a serem feitas.',
+        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
+        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
+        projectURL: 'https://calendar-app-delta.vercel.app/login',
+        imageSrc: CalendarImg,
+      },
+      {
+        uptitle: 'Projeto Full-Stack',
         title: 'Kanban App',
         description:
           'Um quadro de tarefas onde os usuários conseguem adicionar tarefas, arrastá-las entre colunas e acessar quadros de outros usuários',
@@ -65,24 +76,26 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Projeto Full-Stack',
-        title: 'Calendar App',
+        title: 'Dtmoney',
         description:
-          'Um calendário onde é possível definir tarefas a serem feitas.',
-        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
-        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
-        projectURL: 'https://calendar-app-delta.vercel.app/login',
-        imageSrc: CalendarImg,
+          'Uma aplicação para controle pessoal de transações financeiras.',
+        tags: ['React', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB'],
+        githubURL: 'https://github.com/bryanmaraujo544/dtmoney',
+        projectURL: 'https://dtmoney-two-hazel.vercel.app',
+        imageSrc: MoneyImg,
       },
-      {
-        uptitle: 'Projeto Front-End',
-        title: 'Weather App',
-        description:
-          'Uma aplicação onde é possível o usuário inserir o nome de uma cidade do mundo receber as informações climáticas do momento e da semana.',
-        tags: ['React', 'TypeScript'],
-        githubURL: 'https://github.com/bryanmaraujo544/weather-app',
-        projectURL: 'https://weather-app-plum-nine.vercel.app/',
-        imageSrc: WeatherImg,
-      },
+
+      // {
+      //   uptitle: 'Projeto Front-End',
+      //   title: 'Weather App',
+      //   description:
+      // eslint-disable-next-line max-len
+      //     'Uma aplicação onde é possível o usuário inserir o nome de uma cidade do mundo receber as informações climáticas do momento e da semana.',
+      //   tags: ['React', 'TypeScript'],
+      //   githubURL: 'https://github.com/bryanmaraujo544/weather-app',
+      //   projectURL: 'https://weather-app-plum-nine.vercel.app/',
+      //   imageSrc: WeatherImg,
+      // },
     ],
   },
   en: {
@@ -108,6 +121,16 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Full-Stack Project',
+        title: 'Calendar App',
+        description:
+          'A calendar where the user can assign tasks to be completed on some date.',
+        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
+        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
+        projectURL: 'https://calendar-app-delta.vercel.app/login',
+        imageSrc: CalendarImg,
+      },
+      {
+        uptitle: 'Full-Stack Project',
         title: 'Kanban App',
         description:
           'Each user has its own task board with fully editable columns and tasks. And the users can invite and get invited to board of other users',
@@ -125,23 +148,12 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Full-Stack Project',
-        title: 'Calendar App',
-        description:
-          'A calendar where the user can assign tasks to be completed on some date.',
-        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
-        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
-        projectURL: 'https://calendar-app-delta.vercel.app/login',
-        imageSrc: CalendarImg,
-      },
-      {
-        uptitle: 'Front-End Project',
-        title: 'Weather App',
-        description:
-          'An application where the user can search for a city name and receive the current and the weekly weather information.',
-        tags: ['React', 'TypeScript'],
-        githubURL: 'https://github.com/bryanmaraujo544/weather-app',
-        projectURL: 'https://weather-app-plum-nine.vercel.app/',
-        imageSrc: WeatherImg,
+        title: 'Dtmoney',
+        description: 'An application to manage personal money transactions.',
+        tags: ['React', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB'],
+        githubURL: 'https://github.com/bryanmaraujo544/dtmoney',
+        projectURL: 'https://dtmoney-two-hazel.vercel.app',
+        imageSrc: MoneyImg,
       },
     ],
   },

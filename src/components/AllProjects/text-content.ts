@@ -7,6 +7,8 @@ import KanbanImg from 'assets/projects-images/kanban.png';
 import QuizImg from 'assets/projects-images/quiz.png';
 import ImCodeImg from 'assets/projects-images/imcode-landing.png';
 import RestaurantImg from 'assets/projects-images/restaurant-app.png';
+import MoneyImg from 'assets/projects-images/dtmoney.png';
+import EventImg from 'assets/projects-images/event-platform.png';
 
 interface Project {
   uptitle: string;
@@ -74,6 +76,18 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Projeto Full-Stack',
+        title: 'Calendar App',
+        description:
+          'Um calendário onde é possível definir tarefas a serem feitas.',
+        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT', 'Full-Stack'],
+        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
+        projectURL: 'https://calendar-app-delta.vercel.app/login',
+        imageSrc: CalendarImg,
+        complexity: 3,
+        date: new Date('02-04-2022'),
+      },
+      {
+        uptitle: 'Projeto Full-Stack',
         title: 'Kanban App',
         description:
           'Um quadro de tarefas onde os usuários conseguem adicionar tarefas, arrastá-las entre colunas e acessar quadros de outros usuários',
@@ -93,15 +107,15 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Projeto Full-Stack',
-        title: 'Calendar App',
+        title: 'Dtmoney',
         description:
-          'Um calendário onde é possível definir tarefas a serem feitas.',
-        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT', 'Full-Stack'],
-        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
-        projectURL: 'https://calendar-app-delta.vercel.app/login',
-        imageSrc: CalendarImg,
+          'Uma aplicação para controle pessoal de transações financeiras.',
+        tags: ['React', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB'],
+        githubURL: 'https://github.com/bryanmaraujo544/dtmoney',
+        projectURL: 'https://dtmoney-two-hazel.vercel.app',
+        imageSrc: MoneyImg,
         complexity: 3,
-        date: new Date('02-04-2022'),
+        date: new Date('11-07-2022'),
       },
       {
         uptitle: 'Projeto Front-End',
@@ -146,6 +160,18 @@ const textContent: Projects = {
         imageSrc: DevWorldImg,
         complexity: 2,
         date: new Date('12-13-2021'),
+      },
+      {
+        uptitle: 'Projeto Front-End',
+        title: 'Event Platform',
+        description:
+          'Uma plataforma de evento onde usuários podem acessar conteúdos e materiais.',
+        tags: ['React', 'TypeScript', 'GraphQL', 'GraphCMS', 'TailwindCSS'],
+        githubURL: 'https://github.com/bryanmaraujo544/event-platform',
+        projectURL: 'https://event-platform-plum-seven.vercel.app',
+        imageSrc: EventImg,
+        complexity: 2,
+        date: new Date('01-07-2022'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -220,6 +246,18 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Full-Stack Project',
+        title: 'Calendar App',
+        description:
+          'A calendar where the user can assign tasks to be completed on some date.',
+        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT', 'Full-Stack'],
+        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
+        projectURL: 'https://calendar-app-delta.vercel.app/login',
+        imageSrc: CalendarImg,
+        complexity: 3,
+        date: new Date('02-04-2022'),
+      },
+      {
+        uptitle: 'Full-Stack Project',
         title: 'Kanban App',
         description:
           'Each user has its own task board with fully editable columns and tasks. And the users can invite and get invited to board of other users',
@@ -239,15 +277,14 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Full-Stack Project',
-        title: 'Calendar App',
-        description:
-          'A calendar where the user can assign tasks to be completed on some date.',
-        tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT', 'Full-Stack'],
-        githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
-        projectURL: 'https://calendar-app-delta.vercel.app/login',
-        imageSrc: CalendarImg,
+        title: 'Dtmoney',
+        description: 'An application to manage personal money transactions.',
+        tags: ['React', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB'],
+        githubURL: 'https://github.com/bryanmaraujo544/dtmoney',
+        projectURL: 'https://dtmoney-two-hazel.vercel.app',
+        imageSrc: MoneyImg,
         complexity: 3,
-        date: new Date('02-04-2022'),
+        date: new Date('11-07-2022'),
       },
       {
         uptitle: 'Front-End Project',
@@ -291,6 +328,18 @@ const textContent: Projects = {
         imageSrc: DevWorldImg,
         complexity: 2,
         date: new Date('12-13-2021'),
+      },
+      {
+        uptitle: 'Front-End Project',
+        title: 'Event Platform',
+        description:
+          'An event platform where user can access lectures and materials',
+        tags: ['React', 'TypeScript', 'GraphQL', 'GraphCMS', 'TailwindCSS'],
+        githubURL: 'https://github.com/bryanmaraujo544/event-platform',
+        projectURL: 'https://event-platform-plum-seven.vercel.app',
+        imageSrc: EventImg,
+        complexity: 2,
+        date: new Date('01-07-2022'),
       },
       {
         uptitle: 'Full-Stack Project',

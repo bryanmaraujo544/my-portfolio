@@ -77,7 +77,6 @@ export const AllProjects = () => {
       }
       default:
         return a.complexity - b.complexity;
-      // console.log('default');
     }
   });
 
@@ -104,12 +103,7 @@ export const AllProjects = () => {
           {orderedProjects.length} {data[language].resultsText}
         </p>
       )}
-      <Projects
-        as={motion.section}
-        // variants={propagationContainerVariants}
-        // initial="hidden"
-        // animate="show"
-      >
+      <Projects as={motion.section}>
         {orderedProjects.length > 0 ? (
           orderedProjects.map((project, i) => (
             <Project
