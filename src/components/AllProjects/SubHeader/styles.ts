@@ -66,6 +66,12 @@ export const SearchContainer = styled.form`
     padding: 0 1.6rem;
     border-radius: 0.2rem;
 
+    transition: all 0.2s;
+
+    &:focus-within {
+      outline: 1px solid #00a8e8;
+    }
+
     .search-icon {
       color: #e9ecef;
       font-size: 2rem;
@@ -126,9 +132,10 @@ export const OrderingContainer = styled.div`
     gap: 0.8rem;
     background: #003459;
     margin-top: 0.8rem;
-    padding: 0.8rem 0.4rem;
+    padding: 0.8rem;
     border-radius: 0.2rem;
     box-shadow: 0 0.2rem 0.8rem #00000030;
+    border: 1px solid #00a8e850;
 
     p {
       cursor: pointer;
@@ -136,7 +143,7 @@ export const OrderingContainer = styled.div`
       border-radius: 0.2rem;
 
       &:hover {
-        background: #007ea7;
+        background: #007ea760;
       }
     }
   }
@@ -185,11 +192,12 @@ export const FilteringContainer = styled.div`
     gap: 0.8rem;
     background: #003459;
     margin-top: 0.8rem;
-    padding: 0.8rem 0.4rem;
+    padding: 0.8rem 0.8rem;
     border-radius: 0.2rem;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 0.2rem 0.8rem #00000030;
+    border: 1px solid #00a8e850;
   }
 `;
 

@@ -115,7 +115,7 @@ const textContent: Projects = {
         projectURL: 'https://dtmoney-two-hazel.vercel.app',
         imageSrc: MoneyImg,
         complexity: 3,
-        date: new Date('11-07-2022'),
+        date: new Date('07-11-2022'),
       },
       {
         uptitle: 'Projeto Front-End',
@@ -171,7 +171,7 @@ const textContent: Projects = {
         projectURL: 'https://event-platform-plum-seven.vercel.app',
         imageSrc: EventImg,
         complexity: 2,
-        date: new Date('01-07-2022'),
+        date: new Date('07-01-2022'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -284,7 +284,7 @@ const textContent: Projects = {
         projectURL: 'https://dtmoney-two-hazel.vercel.app',
         imageSrc: MoneyImg,
         complexity: 3,
-        date: new Date('11-07-2022'),
+        date: new Date('07-11-2022'),
       },
       {
         uptitle: 'Front-End Project',
@@ -339,7 +339,7 @@ const textContent: Projects = {
         projectURL: 'https://event-platform-plum-seven.vercel.app',
         imageSrc: EventImg,
         complexity: 2,
-        date: new Date('01-07-2022'),
+        date: new Date('07-01-2022'),
       },
       {
         uptitle: 'Full-Stack Project',
