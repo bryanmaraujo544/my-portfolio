@@ -9,6 +9,7 @@ import ImCodeImg from 'assets/projects-images/imcode-landing.png';
 import RestaurantImg from 'assets/projects-images/restaurant-app.png';
 import MoneyImg from 'assets/projects-images/dtmoney.png';
 import EventImg from 'assets/projects-images/event-platform.png';
+import ResfishImg from 'assets/projects-images/resfish.png';
 
 interface Project {
   uptitle: string;
@@ -55,6 +56,27 @@ const textContent: Projects = {
     ],
     orderOptions: ['Recentes', 'Antigos', 'Complexidade'],
     projects: [
+      {
+        uptitle: 'Projeto Full-Stack',
+        title: 'Resfish App',
+        description:
+          'Software para pesqueiros, restaurantes e padarias com sistema de comandas, fechamento de caixas, controle de estoque e uma seção onde a cozinha recebe em tempo real os pratos a serem preparados.',
+        tags: [
+          'React',
+          'Next.js',
+          'TypeScript',
+          'ChakraUI',
+          'Socket.io',
+          'MongoDB',
+          'Full-Stack',
+          'Node.js',
+        ],
+        githubURL: 'https://github.com/bryanmaraujo544/resfish-app',
+        projectURL: 'https://resfish-app.vercel.app/',
+        complexity: 3,
+        date: new Date('07-22-2022'),
+        imageSrc: ResfishImg,
+      },
       {
         uptitle: 'Projeto Full-Stack',
         title: 'Quiz Game',
@@ -225,6 +247,27 @@ const textContent: Projects = {
     ],
     orderOptions: ['Recents', 'Oldest', 'Complexity'],
     projects: [
+      {
+        uptitle: 'Full-Stack Project',
+        title: 'Resfish App',
+        description:
+          'Software for fishing, restaurants and bakeries with a orders system, closing cashiers, stock control and a section where the kitchen receives the dishes to be prepared in real time.',
+        tags: [
+          'React',
+          'Next.js',
+          'TypeScript',
+          'ChakraUI',
+          'Socket.io',
+          'MongoDB',
+          'Full-Stack',
+          'Node.js',
+        ],
+        githubURL: 'https://github.com/bryanmaraujo544/resfish-app',
+        projectURL: 'https://resfish-app.vercel.app/',
+        complexity: 3,
+        date: new Date('07-22-2022'),
+        imageSrc: ResfishImg,
+      },
       {
         uptitle: 'Full-Stack Project',
         title: 'Quiz Game',

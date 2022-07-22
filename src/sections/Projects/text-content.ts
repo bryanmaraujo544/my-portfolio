@@ -1,8 +1,7 @@
 import CalendarImg from 'assets/projects-images/calendar.png';
-import KanbanImg from 'assets/projects-images/kanban.png';
 import QuizImg from 'assets/projects-images/quiz.png';
-// import WeatherImg from 'assets/projects-images/weather.png';
 import MoneyImg from 'assets/projects-images/dtmoney.png';
+import ResfishImg from 'assets/projects-images/resfish.png';
 
 interface Project {
   uptitle: string;
@@ -32,17 +31,28 @@ const textContent: Projects = {
     projects: [
       {
         uptitle: 'Projeto Full-Stack',
+        title: 'Resfish App',
+        description:
+          'Software para pesqueiros, restaurantes e padarias com sistema de comandas, fechamento de caixas, controle de estoque e uma seção onde a cozinha recebe em tempo real os pratos a serem preparados.',
+        tags: [
+          'React',
+          'Next.js',
+          'TypeScript',
+          'ChakraUI',
+          'Socket.io',
+          'MongoDB',
+          'Node.js',
+        ],
+        githubURL: 'https://github.com/bryanmaraujo544/resfish-app',
+        projectURL: 'https://resfish-app.vercel.app/',
+        imageSrc: ResfishImg,
+      },
+      {
+        uptitle: 'Projeto Full-Stack',
         title: 'Quiz Game',
         description:
           'Um quiz multijogador onde existem diversas salas de perguntas e os participantes podem competir entre si.',
-        tags: [
-          'React',
-          'TypeScript',
-          'TypeScript',
-          'Socket.io',
-          'Prisma',
-          'MySQL',
-        ],
+        tags: ['React', 'TypeScript', 'Socket.io', 'Prisma', 'MySQL'],
         githubURL: 'https://github.com/bryanmaraujo544/quiz-game',
         projectURL: 'https://simple-quiz-iota.vercel.app/',
         imageSrc: QuizImg,
@@ -59,23 +69,6 @@ const textContent: Projects = {
       },
       {
         uptitle: 'Projeto Full-Stack',
-        title: 'Kanban App',
-        description:
-          'Um quadro de tarefas onde os usuários conseguem adicionar tarefas, arrastá-las entre colunas e acessar quadros de outros usuários',
-        tags: [
-          'React',
-          'Node.js',
-          'TypeScript',
-          'JWT',
-          'Prisma',
-          "Drag'n Drop",
-        ],
-        githubURL: 'https://github.com/bryanmaraujo544/kanban-app',
-        projectURL: 'https://kanban-app-cyan.vercel.app/',
-        imageSrc: KanbanImg,
-      },
-      {
-        uptitle: 'Projeto Full-Stack',
         title: 'Dtmoney',
         description:
           'Uma aplicação para controle pessoal de transações financeiras.',
@@ -84,24 +77,30 @@ const textContent: Projects = {
         projectURL: 'https://dtmoney-two-hazel.vercel.app',
         imageSrc: MoneyImg,
       },
-
-      // {
-      //   uptitle: 'Projeto Front-End',
-      //   title: 'Weather App',
-      //   description:
-      // eslint-disable-next-line max-len
-      //     'Uma aplicação onde é possível o usuário inserir o nome de uma cidade do mundo receber as informações climáticas do momento e da semana.',
-      //   tags: ['React', 'TypeScript'],
-      //   githubURL: 'https://github.com/bryanmaraujo544/weather-app',
-      //   projectURL: 'https://weather-app-plum-nine.vercel.app/',
-      //   imageSrc: WeatherImg,
-      // },
     ],
   },
   en: {
     title: 'Projects',
     seeMoreButton: 'See more projects',
     projects: [
+      {
+        uptitle: 'Full-Stack Project',
+        title: 'Resfish App',
+        description:
+          'Software for fishing, restaurants and bakeries with a orders system, closing cashiers, stock control and a section where the kitchen receives the dishes to be prepared in real time.',
+        tags: [
+          'React',
+          'Next.js',
+          'TypeScript',
+          'ChakraUI',
+          'Socket.io',
+          'MongoDB',
+          'Node.js',
+        ],
+        githubURL: 'https://github.com/bryanmaraujo544/resfish-app',
+        projectURL: 'https://resfish-app.vercel.app/',
+        imageSrc: ResfishImg,
+      },
       {
         uptitle: 'Full-Stack Project',
         title: 'Quiz Game',
@@ -128,23 +127,6 @@ const textContent: Projects = {
         githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
         projectURL: 'https://calendar-app-delta.vercel.app/login',
         imageSrc: CalendarImg,
-      },
-      {
-        uptitle: 'Full-Stack Project',
-        title: 'Kanban App',
-        description:
-          'Each user has its own task board with fully editable columns and tasks. And the users can invite and get invited to board of other users',
-        tags: [
-          'React',
-          'Node.js',
-          'TypeScript',
-          'JWT',
-          'Prisma',
-          "Drag'n Drop",
-        ],
-        githubURL: 'https://github.com/bryanmaraujo544/kanban-app',
-        projectURL: 'https://kanban-app-cyan.vercel.app/',
-        imageSrc: KanbanImg,
       },
       {
         uptitle: 'Full-Stack Project',
