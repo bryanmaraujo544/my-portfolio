@@ -84,8 +84,8 @@ export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
           </ul>
         )}
         <RightButtons>
-          <Link href="https://www.canva.com/design/DAEaQvDNjfk/4CswO--WGflk6CzEmhEFUQ/view?utm_content=DAEaQvDNjfk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
-            <a target="_blank">
+          <Link href="../assets/curriculo.pdf">
+            <a href="/curriculo.pdf" target="_blank">
               <button
                 type="button"
                 className="resume-btn"
