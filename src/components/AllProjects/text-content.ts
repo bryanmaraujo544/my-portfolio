@@ -10,6 +10,7 @@ import RestaurantImg from 'assets/projects-images/restaurant-app.png';
 import MoneyImg from 'assets/projects-images/dtmoney.png';
 import EventImg from 'assets/projects-images/event-platform.png';
 import ResfishImg from 'assets/projects-images/resfish.png';
+import IgnewsImg from 'assets/projects-images/ignews.png';
 
 interface Project {
   uptitle: string;
@@ -126,6 +127,18 @@ const textContent: Projects = {
         imageSrc: KanbanImg,
         complexity: 3,
         date: new Date('04-03-2022'),
+      },
+      {
+        uptitle: 'Projeto Front-end',
+        title: 'Ignews',
+        description:
+          'Um blog por assinatura, onde o usuário precisa pagar por um valor mensal para ter acesso a todo o conteúdo do artigos.',
+        tags: ['Next.js', 'TypeScript', 'Stripe', 'FaunaDB', 'Prismic CMS'],
+        githubURL: 'https://github.com/bryanmaraujo544/ignews',
+        projectURL: '',
+        imageSrc: IgnewsImg,
+        complexity: 3,
+        date: new Date('07-15-2022'),
       },
       {
         uptitle: 'Projeto Full-Stack',
@@ -305,6 +318,7 @@ const textContent: Projects = {
         description:
           'Each user has its own task board with fully editable columns and tasks. And the users can invite and get invited to board of other users',
         tags: [
+          'React',
           'Node.js',
           'TypeScript',
           'JWT',
@@ -318,6 +332,19 @@ const textContent: Projects = {
         complexity: 3,
         date: new Date('04-03-2022'),
       },
+      {
+        uptitle: 'Front-end Project',
+        title: 'Ignews',
+        description:
+          'An subscription blog where the user can read articles if buy for subscription.',
+        tags: ['Next.js', 'TypeScript', 'Stripe', 'FaunaDB', 'Prismic CMS'],
+        githubURL: 'https://github.com/bryanmaraujo544/ignews',
+        projectURL: '',
+        imageSrc: IgnewsImg,
+        complexity: 3,
+        date: new Date('07-15-2022'),
+      },
+
       {
         uptitle: 'Full-Stack Project',
         title: 'Dtmoney',
