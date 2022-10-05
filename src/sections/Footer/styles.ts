@@ -9,4 +9,5 @@ export const Container = styled.footer`
   p {
     color: #adb5bd;
   }
+  
 `;
