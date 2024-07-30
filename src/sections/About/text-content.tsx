@@ -26,16 +26,8 @@ const textContent = {
         .
       </>,
       <>
-        Atualmente me considero um <b>Desenvolvedor Front-end</b>, pois tenho
-        capacidade para desenvolver interfaces altamente dinâmicas e interativas
-        para diversas finalidades. Porém tenho conhecimento em criação de API's
-        utilizando <b>Node.js</b>, possibilitando-me criar de ponta a ponta uma
-        aplicação.
-      </>,
-      <>
-        Meus objetivos são me especializar ainda mais no Front-end e no Back-end
-        e me tornar um <b>Desenvolvedor Full-Stack.</b>
-      </>,
+        Sou um profissional dedicado à busca contínua por evolução e excelência na criação de soluções que resolvam problemas reais. Tenho um forte foco em contribuir para o sucesso e o desenvolvimento do meu time, acreditando que, ao potencializar o trabalho em equipe, consigo gerar valor significativo para a empresa.
+      </>
     ],
   },
   en: {

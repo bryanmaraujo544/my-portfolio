@@ -84,8 +84,8 @@ export const Header = ({ isProjectsPage }: { isProjectsPage?: boolean }) => {
           </ul>
         )}
         <RightButtons>
-          <Link href="../assets/curriculo.pdf">
-            <a href="/curriculo.pdf" target="_blank">
+          <Link href="../assets/curriculo-2024.pdf">
+            <a href="/curriculo-2024.pdf" target="_blank">
               <button
                 type="button"
                 className="resume-btn"

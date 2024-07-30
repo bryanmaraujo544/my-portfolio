@@ -13,7 +13,7 @@ const textContent: Props = {
     title: 'Contate-me',
     description: (
       <>
-        Não estou aberto à oportunidades de emprego. mas caso queira entrar em contato esteja
+        Caso queira entrar em contato esteja
         à vontade para me mandar um email em <b>bryanmaraujo544@gmail.com</b>,
         ou nas minhas redes sociais abaixo.
       </>
