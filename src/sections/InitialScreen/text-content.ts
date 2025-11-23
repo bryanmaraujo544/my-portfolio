@@ -17,18 +17,18 @@ const textContent: Props = {
     mainInfos: {
       uptitle: 'Olá, meu nome é',
       name: 'Bryan Martins',
-      subtitle: 'Desenvolvedor Full-Stack',
+      subtitle: 'Tech Lead',
       description:
-        'Atualmente trabalho como Desenvolvedor Full-Stack na empresa Curseduca',
+        'Atualmente atuo como Tech Lead na empresa Curseduca. Liderando um dos squads do time de engenharia.',
     },
   },
   en: {
     mainInfos: {
       uptitle: 'Hi, my name is',
       name: 'Bryan Martins',
-      subtitle: 'Full-Stack Developer',
+      subtitle: 'Tech Lead',
       description:
-        "Currently I'm working as Full-Stack Developer at Curseduca",
+        "Currently I'm working as Tech Lead at Curseduca. Leading one of the squads of the engineering team.",
     },
   },
 };

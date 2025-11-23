@@ -44,7 +44,7 @@ const textContent: Projects = {
           'Node.js',
         ],
         githubURL: 'https://github.com/bryanmaraujo544/resfish-app',
-        projectURL: 'https://resfish-app.vercel.app/',
+        projectURL: '',
         imageSrc: ResfishImg,
       },
       {
@@ -54,7 +54,7 @@ const textContent: Projects = {
           'Um quiz multijogador onde existem diversas salas de perguntas e os participantes podem competir entre si.',
         tags: ['React', 'TypeScript', 'Socket.io', 'Prisma', 'MySQL'],
         githubURL: 'https://github.com/bryanmaraujo544/quiz-game',
-        projectURL: 'https://simple-quiz-iota.vercel.app/',
+        projectURL: '',
         imageSrc: QuizImg,
       },
       {
@@ -64,7 +64,7 @@ const textContent: Projects = {
           'Um calendário onde é possível definir tarefas a serem feitas.',
         tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
         githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
-        projectURL: 'https://calendar-app-delta.vercel.app/login',
+        projectURL: '',
         imageSrc: CalendarImg,
       },
       {
@@ -74,7 +74,7 @@ const textContent: Projects = {
           'Uma aplicação para controle pessoal de transações financeiras.',
         tags: ['React', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB'],
         githubURL: 'https://github.com/bryanmaraujo544/dtmoney',
-        projectURL: 'https://dtmoney-two-hazel.vercel.app',
+        projectURL: '',
         imageSrc: MoneyImg,
       },
     ],
@@ -98,7 +98,7 @@ const textContent: Projects = {
           'Node.js',
         ],
         githubURL: 'https://github.com/bryanmaraujo544/resfish-app',
-        projectURL: 'https://resfish-app.vercel.app/',
+        projectURL: '',
         imageSrc: ResfishImg,
       },
       {
@@ -115,7 +115,7 @@ const textContent: Projects = {
           'MySQL',
         ],
         githubURL: 'https://github.com/bryanmaraujo544/quiz-game',
-        projectURL: 'https://simple-quiz-iota.vercel.app/',
+        projectURL: '',
         imageSrc: QuizImg,
       },
       {
@@ -125,7 +125,7 @@ const textContent: Projects = {
           'A calendar where the user can assign tasks to be completed on some date.',
         tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'JWT'],
         githubURL: 'https://github.com/bryanmaraujo544/calendar-app',
-        projectURL: 'https://calendar-app-delta.vercel.app/login',
+        projectURL: '',
         imageSrc: CalendarImg,
       },
       {
@@ -134,7 +134,7 @@ const textContent: Projects = {
         description: 'An application to manage personal money transactions.',
         tags: ['React', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB'],
         githubURL: 'https://github.com/bryanmaraujo544/dtmoney',
-        projectURL: 'https://dtmoney-two-hazel.vercel.app',
+        projectURL: '',
         imageSrc: MoneyImg,
       },
     ],
